@@ -1,4 +1,4 @@
-#include "header.h"
+#include "game.h"
 
 // HALAMAN AWAL DAN LOADING
 void halamanAwal(){
