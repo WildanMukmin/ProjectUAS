@@ -2,18 +2,20 @@
 
 int main (){
 
-	// //halaman awal
-	// halamanAwal();
+	//halaman awal
+	halamanAwal();
 
-	// //verifikasi data user
-	// opsiLogin();
+	//verifikasi data user
+	opsiLogin();
 
 	// //halaman awal game
 	// homeGame();	
 
 
 	linexy(0,0);
-	movePlayer();
+	// movePlayer();
+
+
 
 	return 0;
 

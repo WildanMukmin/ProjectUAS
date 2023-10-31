@@ -93,6 +93,8 @@ void createText(int x, int y, string text ,int tahan = 0){
 void print(auto kata){
 	cout << kata <<endl;
 }
+
+// move player
 void movePlayer(){
 	char player;
 	int xx, yy;
@@ -116,3 +118,24 @@ void movePlayer(){
 
 	}
 }
+
+//--------tempat tempat void tampilan------------//
+
+//tulisan findtreasure
+void tulisanFindTreasure(){
+	createText(33,2,"# # #  #  #     #  # #      # # # # # #  # # #    # # # #  # # # #  # # # #  #     #  # # #    # # # #",50);
+	createText(33,3,"#      #  # #   #  #   #         #       #     #  #        #     #  #        #     #  #     #  #      ",50);
+	createText(33,4,"# # #  #  #  #  #  #    #        #       # # #    # # # #  # # # #  # # # #  #     #  # # #    # # # #",50);
+	createText(33,5,"#      #  #   # #  #   #         #       #  #     #        #     #        #  #     #  #  #     #      ",50);
+	createText(33,6,"#      #  #     #  # #           #       #   #    # # # #  #     #  # # # #  # # # #  #    #   # # # #",50);
+}
+
+//tulisan welcome
+void tulisanwelcome(){
+	createText(43,8,  "||           ||  |||||||||  ||         ||||||||  |||||||||  ||            ||  |||||||||",50);
+	createText(43,9,  "||     ||    ||  ||         ||        ||         ||     ||  || ||      || ||  ||       ",50);
+	createText(43,10, "||   ||  ||  ||  |||||||||  ||        ||         ||     ||  ||   ||  ||   ||  |||||||||",50);
+	createText(43,11, "|| ||     || ||  ||         ||        ||         ||     ||  ||     ||     ||  ||       ",50);
+	createText(43,12, "||           ||  |||||||||  |||||||||  ||||||||  |||||||||  ||            ||  |||||||||",50);
+}
+
