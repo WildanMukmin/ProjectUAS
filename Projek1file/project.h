@@ -147,3 +147,4 @@ void homeGame(){
 	tulisanFindTreasure();
 	getch();
 }
+

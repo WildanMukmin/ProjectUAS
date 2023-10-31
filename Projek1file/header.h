@@ -93,3 +93,26 @@ void createText(int x, int y, string text ,int tahan = 0){
 void print(auto kata){
 	cout << kata <<endl;
 }
+void movePlayer(){
+	char player;
+	int xx, yy;
+	xx = 0;
+	yy = 0;
+	while(true){
+	player = getch();
+
+	if(player == 'w' || player == 'W'){
+		linexy(xx,--yy);
+	}
+	else if(player == 's' || player == 'S'){
+		linexy(xx,++yy);
+	}
+	else if(player == 'd' || player == 'D'){
+		linexy(++xx, yy);
+	}
+	else if(player == 'a' || player == 'A'){
+		linexy(--xx, yy);
+	}
+
+	}
+}
