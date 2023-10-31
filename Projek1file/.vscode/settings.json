@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "editor.fontSize": 18,
+    "window.zoomLevel": 0.5,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontSize": 7,
+    
+}
