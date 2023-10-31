@@ -49,9 +49,9 @@ void createAkun(){
 	createLineY(12, 21 , 113 , 1);
 	createLineX(60, 112, 21, 1);
 	createLineX(60, 112, 12, 1);
-	createText(62, 14, "FORMAT ID BERUPA STRING SEMUA");
+	createText(62, 14, "FORMAT ID BERUPA HURUF SEMUA");
 	createText(62, 15, "MASUKAN ID ANDA : ");
-	createText(62, 17, "FORMAT PIN BERUPA INTEGER SEMUA");
+	createText(62, 17, "FORMAT PIN BERUPA ANGKA SEMUA");
 	createText(62, 18, "MASUKAN PIN ANDA : ");
 	dataBase();
 
