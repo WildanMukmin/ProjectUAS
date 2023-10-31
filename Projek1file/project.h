@@ -131,11 +131,19 @@ void opsiLogin(){
 
 }
 
+//tempat tempat void tampilan
+void tulisanFindTreasure(){
+	createText(33,2,"# # #  #  #     #  # #      # # # # # #  # # #    # # # #  # # # #  # # # #  #     #  # # #    # # # #",50);
+	createText(33,3,"#      #  # #   #  #   #         #       #     #  #        #     #  #        #     #  #     #  #      ",50);
+	createText(33,4,"# # #  #  #  #  #  #    #        #       # # #    # # # #  # # # #  # # # #  #     #  # # #    # # # #",50);
+	createText(33,5,"#      #  #   # #  #   #         #       #  #     #        #     #        #  #     #  #  #     #      ",50);
+	createText(33,6,"#      #  #     #  # #           #       #   #    # # # #  #     #  # # # #  # # # #  #    #   # # # #",50);
+}
+
 //halaman awal game
 void homeGame(){
 	system("cls");
-	createText(60,15, "HALAMAN AWAL GAME",100);
-	createText(60,16, ".................",1000);
-	createText(60,16, "                 ",1000);
-
+	system("color 3");
+	tulisanFindTreasure();
+	getch();
 }
