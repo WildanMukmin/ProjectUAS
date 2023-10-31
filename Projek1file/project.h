@@ -4,12 +4,19 @@
 void halamanAwal(){
 	system("cls");
 	system("color B");
-	createLineX(60, 112, 12  , 10, '-');
-	createLineX(60, 112, 14  , 10, '-');
-	createLineY(12, 14 , 59  , 10, '|' );
-	createLineY(12, 14 , 113 , 10, '|' );
-	createText(74, 13, "S E L A M A T  D A T A N G ");
+	// createLineX(60, 112, 12  , 10, '-');
+	// createLineX(60, 112, 14  , 10, '-');
+	// createLineY(12, 14 , 59  , 10, '|' );
+	// createLineY(12, 14 , 113 , 10, '|' );
+	// createText(74, 13, "W E L C O M E   ");
 	loading(78, 16);
+}
+void tulisanwelcome(){
+	createText(33,2,"||           ||  |||||||||  ||         ||||||||  |||||||||  ||            ||  |||||||||",50);
+	createText(33,3,"||     ||    ||  ||         ||        ||         ||     ||  || ||      || ||  ||       ",50);
+	createText(33,4,"||   ||  ||  ||  |||||||||  ||        ||         ||     ||  ||   ||  ||   ||  |||||||||",50);
+	createText(33,5,"|| ||     || ||  ||         ||        ||         ||     ||  ||     ||     ||  ||       ",50);
+	createText(33,6,"||           ||  |||||||||  |||||||||  ||||||||  |||||||||  ||            ||  |||||||||",50);
 }
 
 // data base
@@ -49,10 +56,11 @@ void createAkun(){
 	createLineY(12, 21 , 113 , 1);
 	createLineX(60, 112, 21, 1);
 	createLineX(60, 112, 12, 1);
-	createText(62, 14, "FORMAT ID BERUPA HURUF SEMUA");
-	createText(62, 15, "MASUKAN ID ANDA : ");
-	createText(62, 17, "FORMAT PIN BERUPA ANGKA SEMUA");
-	createText(62, 18, "MASUKAN PIN ANDA : ");
+	createText(62, 10, "F O R M  M E M B U A T  A K U N");
+	createText(62, 14, "Format Username Berupa HURUF Semua");
+	createText(62, 15, "Masukan Username : ");
+	createText(62, 17, "Format Password Berupa ANGKA Semua");
+	createText(62, 18, "Masukan Password : ");
 	dataBase();
 
 }
@@ -66,8 +74,9 @@ void login(){
 	createLineY(12, 21 , 113 , 1);
 	createLineX(60, 112, 21, 1);
 	createLineX(60, 112, 12, 1);
-	createText(62, 15, "Masukan id user :");
-	createText(62, 18, "Masukan pw user :");
+	createText(62, 10, "F O R M  L O G I N ");
+	createText(62, 15, "Masukan Username :");
+	createText(62, 18, "Masukan Password :");
 	linexy(80, 15);
 	string id;cin>>id;
 	linexy(80, 18);
@@ -109,7 +118,7 @@ void opsiLogin(){
 	createText(62,18, "3. Keluar");
 
 	// pilihan login
-	createText(62, 20, "Jawaban anda : ");
+	createText(62, 20, "Jawaban anda (pilih nomor) : ");
 	int jawab; cin >> jawab;
 	switch(jawab){
 		case 1 :
@@ -129,11 +138,20 @@ void opsiLogin(){
 
 }
 
+//tempat tempat void tampilan
+void tulisanFindTreasure(){
+	createText(33,2,"# # #  #  #     #  # #      # # # # # #  # # #    # # # #  # # # #  # # # #  #     #  # # #    # # # #",50);
+	createText(33,3,"#      #  # #   #  #   #         #       #     #  #        #     #  #        #     #  #     #  #      ",50);
+	createText(33,4,"# # #  #  #  #  #  #    #        #       # # #    # # # #  # # # #  # # # #  #     #  # # #    # # # #",50);
+	createText(33,5,"#      #  #   # #  #   #         #       #  #     #        #     #        #  #     #  #  #     #      ",50);
+	createText(33,6,"#      #  #     #  # #           #       #   #    # # # #  #     #  # # # #  # # # #  #    #   # # # #",50);
+}
+
 //halaman awal game
 void homeGame(){
 	system("cls");
-	createText(60,15, "HALAMAN AWAL GAME",100);
-	createText(60,16, ".................",1000);
-	createText(60,16, "                 ",1000);
-
+	system("color 3");
+	tulisanFindTreasure();
+	getch();
 }
+

@@ -1,16 +1,22 @@
 #include "project.h"
 
 int main (){
+
 	//halaman awal
-	halamanAwal();
+	// halamanAwal();
 
-	//verifikasi data user
-	opsiLogin();
+	// //verifikasi data user
+	// opsiLogin();
 
-	//halaman awal game
-	homeGame();	
+	// //halaman awal game
+	// homeGame();	
 
-	linexy(0,0);
+
+	// linexy(0,0);
+	// // movePlayer();
+
+
+	tulisanwelcome();
 	return 0;
 
 }
