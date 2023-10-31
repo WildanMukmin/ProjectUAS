@@ -118,7 +118,7 @@ void opsiLogin(){
 
 		case 2 :
 		createAkun();
-		opsiLogin();
+		login();
 		break;
 
 		default :
