@@ -66,6 +66,7 @@ void login(){
 	createLineY(12, 21 , 113 , 1);
 	createLineX(60, 112, 21, 1);
 	createLineX(60, 112, 12, 1);
+	createText(62, 10, "F O R M  L O G I N ");
 	createText(62, 15, "Masukan id user :");
 	createText(62, 18, "Masukan pw user :");
 	linexy(80, 15);
