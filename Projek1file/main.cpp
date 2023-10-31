@@ -13,5 +13,4 @@ int main (){
 	linexy(0,0);
 	return 0;
 
-	cout<<"test aja"<<endl;
 }
