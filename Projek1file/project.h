@@ -31,6 +31,32 @@ void homeGame(){
 	system("cls");
 	system("color 3");
 	tulisanFindTreasure();
+	createLineX(60, 112, 12  , 10, '-');
+	createLineX(60, 112, 14  , 10, '-');
+	createLineY(12, 14 , 59  , 10, '|' );
+	createLineY(12, 14 , 113 , 10, '|' );
+	createText(74, 13, "A Y O  M U L A I ! ");
+	createText(77,14, "P I L I H  O P S I");
+	createText(62,16, "1. Mulai");
+	createText(62,17, "2. Beranda");
+
+	// pilihan menu game
+	createText(62, 20, "Jawaban anda (pilih nomor) : ");
+	int jawab; cin >> jawab;
+	switch(jawab){
+		case 1 :
+		contohGame();
+		break;
+
+		case 2 :
+		// opsiLogin(); 
+		break;
+
+		default :
+		system("cls"); 
+		return;
+
+	}
 	getch();
 }
 
@@ -101,7 +127,39 @@ void login(){
     }
 	cekData.close();
 
-	
+	homeGame();
+}
+
+//tampilan awal game
+void opsiGame(){
+	system("cls"); 
+	system("color c");
+	createLineY(12, 21 , 59  , 1);
+	createLineY(12, 21 , 113 , 1);
+	createLineX(60, 112, 21, 1);
+	createLineX(60, 112, 12, 1);
+	createText(77,14, "P I L I H  O P S I");
+	createText(62,16, "1. Mulai");
+	createText(62,17, "2. Beranda");
+
+	// pilihan login
+	createText(62, 20, "Jawaban anda (pilih nomor) : ");
+	int jawab; cin >> jawab;
+	switch(jawab){
+		case 1 :
+		contohGame();
+		break;
+
+		case 2 :
+		system("cls"); 
+		break;
+
+		default :
+		system("cls"); 
+		return;
+
+	}
+
 }
 
 //tampilan awal login
@@ -130,6 +188,10 @@ void opsiLogin(){
 		login();
 		break;
 
+		case 3 :
+		system("cls"); 
+		break;
+
 		default :
 		system("cls"); 
 		return;
@@ -137,5 +199,4 @@ void opsiLogin(){
 	}
 
 }
-
 
