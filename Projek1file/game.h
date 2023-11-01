@@ -1,5 +1,9 @@
 #include "header.h"
 
+//---------------------------Prototypr-------------------------//
+void contohMap();
+void contohGame();
+
 //contoh map
 void contohMap(){
 	createText(0,0 ,"# # # # # # # # # # # # # # # # #   # # # # # # # # # # # # # # # # #");
@@ -104,8 +108,8 @@ void contohGame(){
             --koY;
             createCh(koX,koY,'A');
 		}else if (map[xx - 1][yy] == '#'){
-			// cout << "kalah";
-			continue;
+			
+			break;
 		}
 	}
 	else if(player == 's' || player == 'S'){
@@ -117,8 +121,8 @@ void contohGame(){
             ++koY;
             createCh(koX,koY,'A');
 		}else if (map[xx + 1][yy] == '#'){
-			// cout << "kalah";
-			continue;
+			
+			break;
 		}
 	}
 	else if(player == 'd' || player == 'D'){
@@ -130,8 +134,8 @@ void contohGame(){
             koX += 2;
             createCh(koX,koY,'A');
 		}else if (map[xx][yy + 1] == '#'){
-			// cout << "kalah";
-			continue;
+			
+			break;
 		}
 	}
 	else if(player == 'a' || player == 'A'){
@@ -143,13 +147,13 @@ void contohGame(){
             koX -= 2;
             createCh(koX,koY,'A');
 		}else if (map[xx][yy - 1] == '#'){
-			// cout << "kalah";
-			continue;
+			
+			break;
 		}
 	}
 	else if (player == 'p' || player == 'P'){
-		;
-		return;
+		system("cls");
+		break;
 	}
 
 	}

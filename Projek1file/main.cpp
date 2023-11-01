@@ -3,18 +3,11 @@
 int main (){
 
 	//halaman awal
-	halamanAwal();
+	// halamanAwal();
 
-	//verifikasi data user
+	//verifikasi data user and program
 	opsiLogin();
 
-	// //halaman awal game
-	// homeGame();	
-
-
-	// linexy(0,0);
-	// // movePlayer();
-	// contohGame();
 
 	return 0;
 }

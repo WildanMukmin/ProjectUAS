@@ -1,5 +1,15 @@
 #include "game.h"
 
+//----------------------------Prototype------------------------//
+void halamanAwal();
+void dataBase();
+void homeGame();
+void transisi();
+void createAkun();
+void login();
+void opsiGame();
+void opsiLogin();
+
 // HALAMAN AWAL DAN LOADING
 void halamanAwal(){
 	system("cls");
@@ -35,29 +45,32 @@ void homeGame(){
 	createLineX(60, 112, 14  , 10, '-');
 	createLineY(12, 14 , 59  , 10, '|' );
 	createLineY(12, 14 , 113 , 10, '|' );
-	createText(74, 13, "A Y O  M U L A I ! ");
+	createText(78, 13, "A Y O  M U L A I !");
 	createText(77,14, "P I L I H  O P S I");
 	createText(62,16, "1. Mulai");
 	createText(62,17, "2. Beranda");
 
 	// pilihan menu game
 	createText(62, 20, "Jawaban anda (pilih nomor) : ");
-	int jawab; cin >> jawab;
-	switch(jawab){
-		case 1 :
-		contohGame();
-		break;
+	while(true){
+		int jawab; cin >> jawab;
+		switch(jawab){
+			case 1 :
+			contohGame();
+			system("cls");
+			exit(0);
 
-		case 2 :
-		// opsiLogin(); 
-		break;
+			case 2 :
+			opsiLogin(); 
+			break;
 
-		default :
-		system("cls"); 
-		return;
+			default :
+			createText(0,0, "tolong masukan opsi yang benar kon"); 
+			break;
+
+		}
 
 	}
-	getch();
 }
 
 // login berhasil
@@ -127,7 +140,6 @@ void login(){
     }
 	cekData.close();
 
-	homeGame();
 }
 
 //tampilan awal game
@@ -188,13 +200,9 @@ void opsiLogin(){
 		login();
 		break;
 
-		case 3 :
-		system("cls"); 
-		break;
-
 		default :
 		system("cls"); 
-		return;
+		exit(0);
 
 	}
 
