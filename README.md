@@ -13,7 +13,7 @@ Selamat datang di Game Berburu Harta! Program menarik ini dibangun sebagai proye
 ## Fitur Utama
 
 Program Game Berburu Harta ini memiliki beberapa fitur unggulan, termasuk:
-- Alur cerita yang mendebarkan dan menantang.
+- Verifikasi data user.
 - Konsep permainan yang unik dan menarik.
 - Antarmuka pengguna yang ramah pengguna dan menarik.
 - Pengolahan database yang canggih untuk mengikuti kemajuan permainan Anda.
@@ -22,16 +22,16 @@ Program Game Berburu Harta ini memiliki beberapa fitur unggulan, termasuk:
 ## Cara Memulai
 
 Untuk memulai perjalanan Anda dalam berburu harta, ikuti langkah-langkah sederhana berikut:
-1. Instal program ini di komputer Anda.
-2. Buka program dan buat akun pengguna.
+1. Pastikan komputer anda sudah menginstal C++ dan Compiler ATAU gunakan IDE.
+2. Buka program dalam bentuk binnary file app.exe.
 3. Ikuti petunjuk di layar untuk memahami aturan dan cara bermain.
 4. Nikmati petualangan seru dalam berburu harta!
 
 ## Informasi Kontak
 
 Kami senang mendengar masukan Anda dan menjawab pertanyaan Anda. Jangan ragu untuk menghubungi kami:
-- Surel: gamaberburuharta@email.com
-- Instagram: @gameberburuharta
-- Twitter: @game_berburuharta
+- Surel: wildanmukmin26@email.com
+- Instagram: @wildan_mukmin
+- Twitter: @none-
 
 Terima kasih sudah bergabung dalam petualangan berburu harta ini! Kami berharap Anda akan menikmati permainan ini sebanyak yang kami nikmati saat membuatnya. Selamat bermain!
