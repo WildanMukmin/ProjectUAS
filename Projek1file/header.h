@@ -294,3 +294,63 @@ createText(60,23,"|.','          l%%%%%%%%%%%%%%%l          ','.|");
 createText(60,24,"|;____________l%%%%%%%%%%%%%%%%%l____________;|");
 getch();
 }
+
+// animasi orang joget
+void joget(){
+	for(int i  = 0 ; i<=2; i++){
+createText(10,10," o       ");
+createText(10,11,"/|l      ");
+createText(10,12,"/ l      ");
+delay(800);
+
+createText(10,10,"l o /    ");
+createText(10,11,"  |      ");
+createText(10,12," / l     ");
+delay(800);
+
+createText(10,10,"_ o      ");
+createText(10,11," /l      ");
+createText(10,12,"| l      ");
+delay(800);
+       
+createText(10,10,"___lo    ");
+createText(10,11,"/)  |    ");
+createText(10,12,"         ");
+delay(800);
+
+createText(10,10," __|     ");
+createText(10,11,"   lo    ");
+createText(10,12,"   ( l   ");
+delay(800);
+
+createText(10,10,"l /      ");
+createText(10,11," |       ");
+createText(10,12,"/ol      ");
+delay(800);
+
+createText(10,10,"     |__ ");
+createText(10,11,"   o/    ");
+createText(10,12," / )     ");
+delay(800);
+
+createText(10,10,"   o _   ");
+createText(10,11,"   /l    ");
+createText(10,12,"   / |   ");
+delay(800);
+
+createText(10,10,"l o /    ");
+createText(10,11,"  |      ");
+createText(10,12," / l     ");
+delay(800);
+
+createText(10,10," o       ");
+createText(10,11,"/|l	  ");
+createText(10,12,"/ l	  ");
+delay(800);
+
+createText(10,10,"o/__	  ");
+createText(10,11," |  (l	  ");
+createText(10,12,"      	  ");
+delay(800);
+	}
+}

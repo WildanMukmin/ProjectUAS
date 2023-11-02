@@ -3,12 +3,12 @@
 int main (){
 
 	//halaman awal
-	halamanAwal();
+	// halamanAwal();
 
 	//verifikasi data user and program
-	opsiLogin();
+	// opsiLogin();
 	
 
-
+	joget();
 	return 0;
 }
