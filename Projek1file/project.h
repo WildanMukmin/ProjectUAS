@@ -29,7 +29,8 @@ void stage1();
 void halamanAwal(){
 	system("cls");
 	system("color B");
-	tulisanwelcome();
+	// tulisanwelcome();
+	textWelcome();
 
 	loading(78, 16);
 }
@@ -193,17 +194,10 @@ void opsiGame(){
 void opsiLogin(){
 	system("cls"); 
 	system("color c");
-	createLineY(12, 21 , 59  , 1);
-	createLineY(12, 21 , 113 , 1);
-	createLineX(60, 112, 21, 1);
-	createLineX(60, 112, 12, 1);
-	createText(77,14, "P I L I H  O P S I");
-	createText(62,16, "1. Login");
-	createText(62,17, "2. Buat Akun");
-	createText(62,18, "3. Keluar");
+	boxOpsiLogin();
 
 	// pilihan login
-	createText(62, 20, "Jawaban anda (pilih nomor) : ");
+	linexy(93,21);
 	int jawab; cin >> jawab;
 	switch(jawab){
 		case 1 :

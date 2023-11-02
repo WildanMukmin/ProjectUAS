@@ -6,8 +6,10 @@ int main (){
 	// halamanAwal();
 
 	//verifikasi data user and program
-	// opsiLogin();
-	stage1();
+	opsiLogin();
+	// boxOpsiLogin();
+	// stage1();
+	// textWelcome();
 
 
 	return 0;
