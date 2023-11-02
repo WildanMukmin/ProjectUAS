@@ -161,7 +161,7 @@ createText(30,15,"(_____)-------------------------------------------------------
 getch();
 }
 
-//void box opsi login
+// box opsi login
 void boxOpsiLogin(){
 createText(54,1 ,"                     ,---.           ,---.");
 createText(54,2 ,"                    / /'`.'..''''--./,''` `");
@@ -199,3 +199,74 @@ createText(54,33,"                 /            )  (           '");
 createText(54,34,"                 `..........'    `...........'");
 
 }
+
+// box login
+void boxLogin(){
+createText(60,10," __| |____________________________________________| |__"	);
+createText(60,11,"(__   ____________________________________________   __)"	);
+createText(60,12,"   | |              F O R M  L O G I N            | |"	);
+createText(60,13,"   | |                                            | |"	);
+createText(60,14,"   | |                                            | |"	);
+createText(60,15,"   | |     Masukan Username :                     | |"	);
+createText(60,16,"   | |                                            | |"	);
+createText(60,17,"   | |     Masukan Password :                     | |"	);
+createText(60,18," __| |____________________________________________| |__"	);
+createText(60,19,"(__   ____________________________________________   __)"	);
+createText(60,20,"   | |                                            | |"	);
+}
+
+// box buat akun
+void boxCreateAkun(){
+createText(60,10," __| |________________________________________________________| |__"	);
+createText(60,11,"(__   ________________________________________________________   __)"	);
+createText(60,12,"   | |                   C R E A T E  A K U N                 | |"	);
+createText(60,13,"   | |                                                        | |"	);
+createText(60,14,"   | |                                                        | |"	);
+createText(60,15,"   | |                                                        | |"	);
+createText(60,16,"   | |                                                        | |"	);
+createText(60,17,"   | |                                                        | |"	);
+createText(60,18,"   | |                                                        | |"	);
+createText(60,19,"   | |     Format Username Berupa HURUF Semua *               | |"	);
+createText(60,20,"   | |     Masukan Username :                                 | |"	);
+createText(60,21,"   | |                                                        | |"	);
+createText(60,22,"   | |     Format Password Berupa ANGKA Semua *               | |"	);
+createText(60,23,"   | |     Masukan Password :                                 | |"	);
+createText(60,24," __| |________________________________________________________| |__"	);
+createText(60,25,"(__   ________________________________________________________   __)"	);
+createText(60,26,"   | |                                                        | |"	);
+}
+
+// petunjuk penggunaan game
+void boxControlGuide(){
+createText(77,0 ," __________________________________________________________________"	);
+createText(77,1 ,"(__   ________________________________________________________   __)"	);
+createText(77,2 ,"   | |                    TOOLS INFORMATION !!                | |"	);
+createText(77,3 ,"   | |                                                        | |"	);
+createText(77,4 ,"   | |   W  ==>  M O V E  U P                                 | |"	);
+createText(77,5 ,"   | |   S  ==>  M O V E  D O W N                             | |"	);
+createText(77,6 ,"   | |   D  ==>  M O V E  R I G H T                           | |"	);
+createText(77,7 ,"   | |   A  ==>  M O V E  L E F T                             | |"	);
+createText(77,8 ,"   | |                                                        | |"	);
+createText(77,9 ,"   | |   P  ==>  B A C K  T O  L O B B Y                      | |"	);
+createText(77,10,"   | |                                                        | |"	);
+createText(77,11,"   | |   S C O R E :                                          | |"	);
+createText(77,12,"   | |                                                        | |"	);
+createText(77,13,"   | |   H I G H  S C O R E :                                 | |"	);
+createText(77,14," __| |________________________________________________________| |__"	);
+createText(77,15,"(__   ________________________________________________________   __)"	);
+createText(77,16,"   | |                    G A M E  G U I D E                  | |"	);
+createText(77,17,"   | |                                                        | |"	);
+createText(77,18,"   | |   RULES !!                                             | |"	);
+createText(77,19,"   | |                                                        | |"	);
+createText(77,20,"   | |   1. DILARANG MENABRAK TEMBOK!!                        | |"	);
+createText(77,21,"   | |   2. UNTUK MENAMBAH POIN DI DAPAT DENGAN :             | |"	);
+createText(77,22,"   | |      a. MENEMUKAN HARTA KARUN                          | |"	);
+createText(77,23,"   | |      B. MENEMUKAN JALAN KELUAR                         | |"	);
+createText(77,24,"   | |         DAN MELANJUTKAN KE STAGE BERIKUTNYA!           | |"	);
+createText(77,25,"   | |   3. PENCAPAIAN MU AKAN DI REKAM DAN DI TAMPILKAN.     | |"	);
+createText(77,26,"   | |                                                        | |"	);
+createText(77,27,"   | |                   SEMOGA BERHASIL :)                   | |"	);
+createText(77,28," __| |________________________________________________________| |__"	);
+createText(77,29,"(__________________________________________________________________)"	);
+}
+

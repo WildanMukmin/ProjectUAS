@@ -6,11 +6,10 @@ int main (){
 	// halamanAwal();
 
 	//verifikasi data user and program
-	opsiLogin();
-	// boxOpsiLogin();
-	// stage1();
-	// textWelcome();
+	// opsiLogin();
 
+	// homeGame();
+	stage1();
 
 	return 0;
 }
