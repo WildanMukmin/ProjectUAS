@@ -6,7 +6,8 @@ int main (){
 	// halamanAwal();
 
 	//verifikasi data user and program
-	opsiLogin();
+	// opsiLogin();
+	stage1();
 
 
 	return 0;
