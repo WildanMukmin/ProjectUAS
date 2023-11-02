@@ -232,7 +232,7 @@ void map1(){
 	createText(0,27,"#     # # # # # # # # # # # # # # # # # # # #   #       #       #   #");
 	createText(0,28,"#                                         X #   #       #       #   #");
 	createText(0,29,"#                                           #   #     X #       #   #");
-	createText(0,30,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # . . # # #");
+	createText(0,30,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #     # # #");
 }
 
 //---------------------Coding Game-------------------//
@@ -336,6 +336,17 @@ void stage1(){
             createCh(koX,koY,'A');
 			totalScore += 50;
 		}
+		else if(map[xx - 1][yy] == '.'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
 		else if (map[xx - 1][yy] == '#'){
 			break;
 		}
@@ -357,6 +368,17 @@ void stage1(){
             ++koY;
             createCh(koX,koY,'A');
 			totalScore += 50;
+		}
+		else if(map[xx + 1][yy] == '.'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
 		}
 		else if (map[xx + 1][yy] == '#'){
 			break;
@@ -380,6 +402,17 @@ void stage1(){
             createCh(koX,koY,'A');
 			totalScore += 50;
 		}
+		else if(map[xx][yy + 1] == '.'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
 		else if (map[xx][yy + 1] == '#'){
 			break;
 		}
@@ -401,6 +434,17 @@ void stage1(){
             koX -= 2;
             createCh(koX,koY,'A');
 			totalScore += 50;
+		}
+		else if(map[xx][yy - 1] == '.'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			break;
