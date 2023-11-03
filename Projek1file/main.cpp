@@ -7,8 +7,10 @@ int main (){
 
 	//verifikasi data user and program
 	// opsiLogin();
-	
+	// alurGame();
 
-	joget();
+	alurGame();
+
+	//joget();
 	return 0;
 }
