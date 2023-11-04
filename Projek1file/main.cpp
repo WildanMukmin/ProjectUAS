@@ -3,13 +3,14 @@
 int main (){
 
 	//halaman awal
-	halamanAwal();
+	// halamanAwal();
 
 	//verifikasi data user and program
-	opsiLogin();
+	// opsiLogin();
 
 
-	alurGame();
+	// alurGame();
+	tulisanFindTreasure();
 
 	//joget();
 	return 0;
