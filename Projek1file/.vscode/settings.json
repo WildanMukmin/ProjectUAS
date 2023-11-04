@@ -4,7 +4,7 @@
         "iostream": "cpp"
     },
     "editor.fontSize": 16,
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": -1,
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "material-icon-theme",
     "terminal.integrated.fontSize": 14,

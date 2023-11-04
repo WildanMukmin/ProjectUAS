@@ -144,36 +144,23 @@ void homeGame(){
 	system("cls");
 	system("color 3");
 	tulisanFindTreasure();
-	createLineX(60, 112, 12  , 10, '-');
-	createLineX(60, 112, 14  , 10, '-');
-	createLineY(12, 14 , 59  , 10, '|' );
-	createLineY(12, 14 , 113 , 10, '|' );
-	createText(78, 13, "A Y O  M U L A I !");
-	createText(77,14, "P I L I H  O P S I");
-	createText(62,16, "1. Mulai");
-	createText(62,17, "2. Beranda");
 
 	// pilihan menu game
-	createText(62, 20, "Jawaban anda (pilih nomor) : ");
+	createText(62, 30, "Jawaban anda : y untuk melanjukan");
+	createText(62, 31, "Jawaban anda : e untuk ke beranda");
+		char jawab; 
 
-		int jawab; cin >> jawab;
-		switch(jawab){
-			case 1 :
+		while(true){
+		jawab = getch();
+		if (jawab == 'Y' || jawab == 'y'){
 			alurGame();
 			system("cls");
 			exit(0);
-
-			case 2 :
+		}else if (jawab == 'E' || jawab == 'e'){
 			opsiLogin(); 
 			break;
-
-			default :
-			createText(70,10, "tolong masukan opsi yang benar kon",500);
-			getch(); 
-			system("cls");
-			break;
 		}
-
+		}
 }
 
 
