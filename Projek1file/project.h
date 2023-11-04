@@ -14,6 +14,7 @@ void alurGame();
 void aktifScore(int score);
 int readAktifScore();
 void resetScore();
+void gameOver();
 
 
 //---------------------------prototype Map----------------------//
@@ -454,6 +455,7 @@ void stage1(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -488,6 +490,7 @@ void stage1(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -522,6 +525,7 @@ void stage1(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -556,6 +560,7 @@ void stage1(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -686,6 +691,7 @@ void stage2(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -720,6 +726,7 @@ void stage2(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -754,6 +761,7 @@ void stage2(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -788,6 +796,7 @@ void stage2(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -918,6 +927,7 @@ void stage3(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -952,6 +962,7 @@ void stage3(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -986,6 +997,7 @@ void stage3(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -1020,6 +1032,7 @@ void stage3(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			gameOver();
 			break;
 		}
 	}
@@ -1034,9 +1047,30 @@ void stage3(){
 }
 
 //---------------------Alur Game-------------------//
+
+// plot game
 void alurGame(){
 	stage1();
 	stage2();
 	stage3();
 
 }
+
+// game over
+void gameOver(){
+	boxGameOver();
+	char parameter;
+	while(true){
+	char parameter = getch();
+	linexy(100,0);
+	if(parameter == 'B' || parameter == 'b'){
+		homeGame();
+		break;
+	}else if(parameter == 'N' || parameter == 'n'){
+		system("cls");
+		exit(0);
+	}
+	}
+
+}
+

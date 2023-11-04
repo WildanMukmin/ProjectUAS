@@ -354,3 +354,18 @@ createText(10,12,"      	  ");
 delay(800);
 	}
 }
+
+// box game over
+void boxGameOver(){
+	createText(60,10," __| |____________________________________________| |__"	);
+	createText(60,11,"(__   ____________________________________________   __)"	);
+	createText(60,12,"   | |              G A M E  O V E R !            | |"	);
+	createText(60,13,"   | |                                            | |"	);
+	createText(60,14,"   | |                                            | |"	);
+	createText(60,15,"   | |     Kembali ke Beranda  --> press B <--    | |"	);
+	createText(60,16,"   | |                                            | |"	);
+	createText(60,17,"   | |         Keluar Game     --> press N <--    | |"	);
+	createText(60,18," __| |____________________________________________| |__"	);
+	createText(60,19,"(__   ____________________________________________   __)"	);
+	createText(60,20,"   | |                                            | |"	);
+}
