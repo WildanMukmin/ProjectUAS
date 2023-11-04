@@ -7,6 +7,9 @@
 #include<cstring>
 #include<string>
 #include<fstream>
+#include "mmsystem.h"
+
+#pragma comment(lib, "winmm.lib")
 
 using namespace std;
 
@@ -235,7 +238,6 @@ void textWelcome(){
 	createText(30,13," |   |         '__/  '__/        |_______|   |_______|    '______|    '______/     |__|  |__|    |_______|     |   | ");
 	createText(30,14," |___|                                                                                                         |___| ");
 	createText(30,15,"(_____)-------------------------------------------------------------------------------------------------------(_____)");
-	getch();
 }
 
 // box opsi login

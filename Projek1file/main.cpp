@@ -1,7 +1,8 @@
-#include "project.h"
-
+#include "project.h" 
 int main (){
-	halamanAwal();
-	opsiLogin();
-	return 0;
+
+    halamanAwal();
+    opsiLogin();
+
+    return 0;
 }

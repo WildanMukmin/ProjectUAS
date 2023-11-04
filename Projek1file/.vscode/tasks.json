@@ -11,6 +11,7 @@
                 "-o",
                 "app",
                 "main.cpp",
+                "-lwinmm",
             ]
         },
         {

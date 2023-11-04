@@ -34,7 +34,11 @@ void stage3();
 void halamanAwal(){
 	system("cls");
 	textWelcome();
+	PlaySound(TEXT("soundHalamanAwal.wav"), NULL, SND_ASYNC | SND_LOOP);
+	getch();
 	loading(78, 16);
+	getch();
+	PlaySound(0,0,0);
 }
 
 //tampilan awal login
@@ -112,6 +116,7 @@ void transisi(){
 	createLineY(12, 14 , 113 , 10, '|' );
 	createText(74, 13, "L O G I N  B E R H A S I L ");
 	loading(78, 16);
+	getch();
 	homeGame();
 }
 
@@ -135,6 +140,7 @@ void dataBase(){
 //halaman awal game
 void homeGame(){
 	system("cls");
+	PlaySound(TEXT("contoh.wav"), NULL, SND_ASYNC | SND_LOOP);
 	tulisanFindTreasure();
 
 	// pilihan menu game
@@ -149,6 +155,7 @@ void homeGame(){
 			system("cls");
 			exit(0);
 		}else if (jawab == 'E' || jawab == 'e'){
+			PlaySound(0,0,0);
 			opsiLogin(); 
 			break;
 		}
