@@ -439,4 +439,47 @@ void boxGameOver(){
 	createText(60,20,"   | |                                            | |"	);
 }
 
+// test warna 
+void testWarna(){
+	cout << GRAY << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << RED << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << GREEN << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << YELLOW << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << BLUE << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << MAGENTA << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << CYAN << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << WHITE << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
 
+    cout << endl;
+
+    cout << GRAY_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << RED_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << GREEN_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << YELLOW_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << BLUE_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << MAGENTA_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << CYAN_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << WHITE_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+        
+    cout << endl;
+    
+    cout << GRAY_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << RED_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << GREEN_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << YELLOW_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << BLUE_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << MAGENTA_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << CYAN_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << WHITE_BG << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    
+    cout << endl;
+
+    cout << GRAY_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << RED_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << GREEN_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << YELLOW_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << BLUE_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << MAGENTA_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << CYAN_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+    cout << WHITE_BG_LIGHT << "TEST WARNA <<<<---->>>> TEST WARNA" << RESET <<endl;
+}
