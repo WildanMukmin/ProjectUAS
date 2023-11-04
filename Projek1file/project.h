@@ -417,7 +417,7 @@ void stage1(){
 		cout<<readScore();
 		linexy(koX,koY);
 
-	//-------------------------------akhir posisi score-----------------------//
+	//----------------------------akhir posisi score-----------------------//
 
 
 	//--------------------------------- Control User ----------------------------//
@@ -1036,11 +1036,7 @@ void stage3(){
 //---------------------Alur Game-------------------//
 void alurGame(){
 	stage1();
-	homeGame();
-
 	stage2();
-	homeGame();
-	
 	stage3();
-	homeGame();
+
 }

@@ -3,11 +3,11 @@
 int main (){
 
 	//halaman awal
-	// halamanAwal();
+	halamanAwal();
 
 	//verifikasi data user and program
-	// opsiLogin();
-	// alurGame();
+	opsiLogin();
+
 
 	alurGame();
 
