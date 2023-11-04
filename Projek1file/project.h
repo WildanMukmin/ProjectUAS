@@ -7,11 +7,13 @@ void homeGame();
 void transisi();
 void createAkun();
 void login();
-void opsiGame();
 void opsiLogin();
 void score(int score);
 int readScore();
 void alurGame();
+void aktifScore(int score);
+int readAktifScore();
+void resetScore();
 
 
 //---------------------------prototype Map----------------------//
@@ -187,6 +189,15 @@ void score(int score){
 	}
 }
 
+//menyimpan score yang sekarang
+void aktifScore(int score){
+	ofstream aktifScore;
+	int showScore = readAktifScore() + score;
+	aktifScore.open("aktifScore.txt");
+	aktifScore << showScore;
+	aktifScore.close();
+}
+
 // membaca data base score
 int readScore(){
 	ifstream cekData;
@@ -200,7 +211,26 @@ int readScore(){
 	return output;
 }
 
+// membaca data base socre yang aktif
+int readAktifScore(){
+	ifstream cekData;
 
+	int output;
+
+	cekData.open("aktifScore.txt");
+	cekData >> output;
+	cekData.close();
+
+	return output;
+}
+
+//reset score
+void resetScore(){
+	ofstream resetScore;
+	resetScore.open("aktifScore.txt");
+	resetScore << 0;
+	resetScore.close();
+}
 
 //---------------------Map Game----------------------//
 void map1(){
@@ -311,13 +341,13 @@ void stage1(){
 	system("color c");
     map1();
 	char player;
-	int xx, yy,koX,koY,totalScore, highScore;
+	int xx, yy,koX,koY,highScore;
 	xx = 1;
 	yy = 1;
     koX = 2;
     koY = 1;
-	totalScore = 0;
 	highScore = 0;
+	aktifScore(0);
 	boxControlGuide();
 
 
@@ -374,18 +404,23 @@ void stage1(){
     createCh(koX, koY, 'A');
     while(true){
 		
-		if(totalScore >= highScore){
-			highScore = totalScore;
+		if(readAktifScore() >= highScore){
+			highScore = readAktifScore();
 			score(highScore);
 		}
 
+	//------------------------------Posisi Score---------------------------//
+
 		linexy(98,11);
-		cout<< totalScore;
+		cout<< readAktifScore();
 		linexy(107,13);
 		cout<<readScore();
 		linexy(koX,koY);
 
-	//------------------------ Control User ------------------//
+	//-------------------------------akhir posisi score-----------------------//
+
+
+	//--------------------------------- Control User ----------------------------//
 	player = getch();
 
 	if     (player == 'w' || player == 'W'){
@@ -404,7 +439,7 @@ void stage1(){
             createCh(koX,koY,' ');
             --koY;
             createCh(koX,koY,'A');
-			totalScore += 50;
+			aktifScore(50);
 		}
 		else if(map[xx - 1][yy] == '.'){
 			map[xx - 1][yy] = 'A';
@@ -418,6 +453,7 @@ void stage1(){
 			break;
 		}
 		else if (map[xx - 1][yy] == '#'){
+			resetScore();
 			break;
 		}
 	}
@@ -437,7 +473,7 @@ void stage1(){
             createCh(koX,koY,' ');
             ++koY;
             createCh(koX,koY,'A');
-			totalScore += 50;
+			aktifScore(50);
 		}
 		else if(map[xx + 1][yy] == '.'){
 			map[xx + 1][yy] = 'A';
@@ -451,6 +487,7 @@ void stage1(){
 			break;
 		}
 		else if (map[xx + 1][yy] == '#'){
+			resetScore();
 			break;
 		}
 	}
@@ -470,7 +507,7 @@ void stage1(){
             createCh(koX,koY,' ');
             koX += 2;
             createCh(koX,koY,'A');
-			totalScore += 50;
+			aktifScore(50);
 		}
 		else if(map[xx][yy + 1] == '.'){
 			map[xx][yy + 1] = 'A';
@@ -484,6 +521,7 @@ void stage1(){
 			break;
 		}
 		else if (map[xx][yy + 1] == '#'){
+			resetScore();
 			break;
 		}
 	}
@@ -503,7 +541,7 @@ void stage1(){
             createCh(koX,koY,' ');
             koX -= 2;
             createCh(koX,koY,'A');
-			totalScore += 50;
+			aktifScore(50);
 		}
 		else if(map[xx][yy - 1] == '.'){
 			map[xx][yy - 1] = 'A';
@@ -517,15 +555,17 @@ void stage1(){
 			break;
 		}
 		else if (map[xx][yy - 1] == '#'){	
+			resetScore();
 			break;
 		}
 	}
 	else if(player == 'p' || player == 'P'){
+		resetScore();
 		system("cls");
 		homeGame();
 		break;
 	}
-	//------------------------ end Control User ------------------//
+	//-------------------------------- end Control User ----------------------------//
 	}
 }
 
@@ -539,7 +579,6 @@ void stage2(){
 	yy = 32; //ini untuk char
     koX = 64; //ini untuk map()
     koY = 29; //ini untuk map()
-	totalScore = 0;
 	highScore = 0;
 	boxControlGuide();
 
@@ -597,158 +636,168 @@ void stage2(){
     createCh(koX, koY, 'A');
     while(true){
 		
-		if(totalScore >= highScore){
-			highScore = totalScore;
+		if(readAktifScore() >= highScore){
+			highScore = readAktifScore();
 			score(highScore);
 		}
 
+	//------------------------------Posisi Score---------------------------//
+
 		linexy(98,11);
-		cout<< totalScore;
+		cout<< readAktifScore();
 		linexy(107,13);
 		cout<<readScore();
 		linexy(koX,koY);
 
-		//------------------------ Control User ------------------//
-		player = getch();
+	//-------------------------------akhir posisi score-----------------------//
 
-		if     (player == 'w' || player == 'W'){
-			if(map[xx - 1][yy] == ' '){
-				map[xx - 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				--xx;
-				createCh(koX,koY,' ');
-				--koY;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx - 1][yy] == 'X'){
-				map[xx - 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				--xx;
-				createCh(koX,koY,' ');
-				--koY;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx - 1][yy] == '.'){
-				map[xx - 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				--xx;
-				createCh(koX,koY,' ');
-				--koY;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx - 1][yy] == '#'){
-				break;
-			}
-			}
-		else if(player == 's' || player == 'S'){
-			if(map[xx + 1][yy] == ' '){
-				map[xx + 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				++xx;
-				createCh(koX,koY,' ');
-				++koY;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx + 1][yy] == 'X'){
-				map[xx + 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				++xx;
-				createCh(koX,koY,' ');
-				++koY;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx + 1][yy] == '.'){
-				map[xx + 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				++xx;
-				createCh(koX,koY,' ');
-				++koY;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx + 1][yy] == '#'){
-				break;
-			}
-			}
-		else if(player == 'd' || player == 'D'){
-			if(map[xx][yy + 1] == ' '){
-				map[xx][yy + 1] = 'A';
-				map[xx][yy] = ' ';
-				++yy;
-				createCh(koX,koY,' ');
-				koX += 2;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx][yy + 1] == 'X'){
-				map[xx][yy + 1] = 'A';
-				map[xx][yy] = ' ';
-				++yy;
-				createCh(koX,koY,' ');
-				koX += 2;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx][yy + 1] == '.'){
-				map[xx][yy + 1] = 'A';
-				map[xx][yy] = ' ';
-				++yy;
-				createCh(koX,koY,' ');
-				koX += 2;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx][yy + 1] == '#'){
-				break;
-			}
-			}
-		else if(player == 'a' || player == 'A'){
-			if(map[xx][yy - 1] == ' '){
-				map[xx][yy - 1] = 'A';
-				map[xx][yy] = ' ';
-				--yy;
-				createCh(koX,koY,' ');
-				koX -= 2;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx][yy - 1] == 'X'){
-				map[xx][yy - 1] = 'A';
-				map[xx][yy] = ' ';
-				--yy;
-				createCh(koX,koY,' ');
-				koX -= 2;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx][yy - 1] == '.'){
-				map[xx][yy - 1] = 'A';
-				map[xx][yy] = ' ';
-				--yy;
-				createCh(koX,koY,' ');
-				koX -= 2;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx][yy - 1] == '#'){	
-				break;
-			}
-			}
-		else if(player == 'p' || player == 'P'){
+
+	//--------------------------------- Control User ----------------------------//
+	player = getch();
+
+	if     (player == 'w' || player == 'W'){
+		if(map[xx - 1][yy] == ' '){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx - 1][yy] == 'X'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx - 1][yy] == '.'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
 			system("cls");
-			homeGame();
+			lolosStage();
 			break;
-			}
-		//------------------------ end Control User ------------------//
+		}
+		else if (map[xx - 1][yy] == '#'){
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 's' || player == 'S'){
+		if(map[xx + 1][yy] == ' '){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx + 1][yy] == 'X'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx + 1][yy] == '.'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx + 1][yy] == '#'){
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 'd' || player == 'D'){
+		if(map[xx][yy + 1] == ' '){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx][yy + 1] == 'X'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx][yy + 1] == '.'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx][yy + 1] == '#'){
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 'a' || player == 'A'){
+		if(map[xx][yy - 1] == ' '){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx][yy - 1] == 'X'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx][yy - 1] == '.'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx][yy - 1] == '#'){	
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 'p' || player == 'P'){
+		resetScore();
+		system("cls");
+		homeGame();
+		break;
+	}
+	//-------------------------------- end Control User ----------------------------//
 	}
 }
 
@@ -762,7 +811,6 @@ void stage3(){
 	yy = 14; //ini untuk char
     koX = 28; //ini untuk map()
     koY = 1; //ini untuk map()
-	totalScore = 0;
 	highScore = 0;
 	boxControlGuide();
 
@@ -820,164 +868,179 @@ void stage3(){
     createCh(koX, koY, 'A');
     while(true){
 		
-		if(totalScore >= highScore){
-			highScore = totalScore;
+		if(readAktifScore() >= highScore){
+			highScore = readAktifScore();
 			score(highScore);
 		}
 
+	//------------------------------Posisi Score---------------------------//
+
 		linexy(98,11);
-		cout<< totalScore;
+		cout<< readAktifScore();
 		linexy(107,13);
 		cout<<readScore();
 		linexy(koX,koY);
 
-		//------------------------ Control User ------------------//
-		player = getch();
+	//-------------------------------akhir posisi score-----------------------//
 
-		if     (player == 'w' || player == 'W'){
-			if(map[xx - 1][yy] == ' '){
-				map[xx - 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				--xx;
-				createCh(koX,koY,' ');
-				--koY;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx - 1][yy] == 'X'){
-				map[xx - 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				--xx;
-				createCh(koX,koY,' ');
-				--koY;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx - 1][yy] == '.'){
-				map[xx - 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				--xx;
-				createCh(koX,koY,' ');
-				--koY;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx - 1][yy] == '#'){
-				break;
-			}
-			}
-		else if(player == 's' || player == 'S'){
-			if(map[xx + 1][yy] == ' '){
-				map[xx + 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				++xx;
-				createCh(koX,koY,' ');
-				++koY;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx + 1][yy] == 'X'){
-				map[xx + 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				++xx;
-				createCh(koX,koY,' ');
-				++koY;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx + 1][yy] == '.'){
-				map[xx + 1][yy] = 'A';
-				map[xx][yy] = ' ';
-				++xx;
-				createCh(koX,koY,' ');
-				++koY;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx + 1][yy] == '#'){
-				break;
-			}
-			}
-		else if(player == 'd' || player == 'D'){
-			if(map[xx][yy + 1] == ' '){
-				map[xx][yy + 1] = 'A';
-				map[xx][yy] = ' ';
-				++yy;
-				createCh(koX,koY,' ');
-				koX += 2;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx][yy + 1] == 'X'){
-				map[xx][yy + 1] = 'A';
-				map[xx][yy] = ' ';
-				++yy;
-				createCh(koX,koY,' ');
-				koX += 2;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx][yy + 1] == '.'){
-				map[xx][yy + 1] = 'A';
-				map[xx][yy] = ' ';
-				++yy;
-				createCh(koX,koY,' ');
-				koX += 2;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx][yy + 1] == '#'){
-				break;
-			}
-			}
-		else if(player == 'a' || player == 'A'){
-			if(map[xx][yy - 1] == ' '){
-				map[xx][yy - 1] = 'A';
-				map[xx][yy] = ' ';
-				--yy;
-				createCh(koX,koY,' ');
-				koX -= 2;
-				createCh(koX,koY,'A');
-			}
-			else if(map[xx][yy - 1] == 'X'){
-				map[xx][yy - 1] = 'A';
-				map[xx][yy] = ' ';
-				--yy;
-				createCh(koX,koY,' ');
-				koX -= 2;
-				createCh(koX,koY,'A');
-				totalScore += 50;
-			}
-			else if(map[xx][yy - 1] == '.'){
-				map[xx][yy - 1] = 'A';
-				map[xx][yy] = ' ';
-				--yy;
-				createCh(koX,koY,' ');
-				koX -= 2;
-				createCh(koX,koY,'A');
-				system("cls");
-				lolosStage();
-				break;
-			}
-			else if (map[xx][yy - 1] == '#'){	
-				break;
-			}
-			}
-		else if(player == 'p' || player == 'P'){
+
+	//--------------------------------- Control User ----------------------------//
+	player = getch();
+
+	if     (player == 'w' || player == 'W'){
+		if(map[xx - 1][yy] == ' '){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx - 1][yy] == 'X'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx - 1][yy] == '.'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
 			system("cls");
-			homeGame();
+			lolosStage();
 			break;
-			}
-		//------------------------ end Control User ------------------//
+		}
+		else if (map[xx - 1][yy] == '#'){
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 's' || player == 'S'){
+		if(map[xx + 1][yy] == ' '){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx + 1][yy] == 'X'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx + 1][yy] == '.'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx + 1][yy] == '#'){
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 'd' || player == 'D'){
+		if(map[xx][yy + 1] == ' '){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx][yy + 1] == 'X'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx][yy + 1] == '.'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx][yy + 1] == '#'){
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 'a' || player == 'A'){
+		if(map[xx][yy - 1] == ' '){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx][yy - 1] == 'X'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx][yy - 1] == '.'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx][yy - 1] == '#'){	
+			resetScore();
+			break;
+		}
+	}
+	else if(player == 'p' || player == 'P'){
+		resetScore();
+		system("cls");
+		homeGame();
+		break;
+	}
+	//-------------------------------- end Control User ----------------------------//
 	}
 }
 
 //---------------------Alur Game-------------------//
 void alurGame(){
 	stage1();
+	homeGame();
+
 	stage2();
+	homeGame();
+	
 	stage3();
+	homeGame();
 }
