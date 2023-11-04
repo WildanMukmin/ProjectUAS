@@ -33,17 +33,13 @@ void stage3();
 // HALAMAN AWAL DAN LOADING
 void halamanAwal(){
 	system("cls");
-	system("color B");
-	// tulisanwelcome();
 	textWelcome();
-
 	loading(78, 16);
 }
 
 //tampilan awal login
 void opsiLogin(){
 	system("cls"); 
-	system("color c");
 	boxOpsiLogin();
 
 	// pilihan login
@@ -70,7 +66,6 @@ void opsiLogin(){
 // pilihan buat akun
 void createAkun(){
 	system("cls");
-	system("color 3e");
 	boxCreateAkun();
 	dataBase();
 
@@ -80,7 +75,6 @@ void createAkun(){
 void login(){
 	string output;
 	system("cls");
-	system("color 3e");
 	boxLogin();
 	linexy(90, 15);
 	string id;cin>>id;
@@ -112,7 +106,6 @@ void login(){
 // login berhasil
 void transisi(){
 	system("cls");
-	system("color A");
 	createLineX(60, 112, 12  , 10, '-');
 	createLineX(60, 112, 14  , 10, '-');
 	createLineY(12, 14 , 59  , 10, '|' );
@@ -142,7 +135,6 @@ void dataBase(){
 //halaman awal game
 void homeGame(){
 	system("cls");
-	system("color 3");
 	tulisanFindTreasure();
 
 	// pilihan menu game
@@ -326,7 +318,6 @@ void map3(){
 //---------------------Coding Game-------------------//
 void stage1(){
 	system("cls");
-	system("color c");
     map1();
 	char player;
 	int xx, yy,koX,koY,highScore;
@@ -567,7 +558,6 @@ void stage1(){
 
 void stage2(){
 	system("cls");
-	system("color c");
     map2();
 	char player;
 	int xx, yy,koX,koY,totalScore, highScore;
@@ -807,7 +797,6 @@ void stage2(){
 
 void stage3(){
 	system("cls");
-	system("color c");
     map3();
 	char player;
 	int xx, yy,koX,koY,totalScore, highScore;

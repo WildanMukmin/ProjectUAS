@@ -13,7 +13,7 @@ using namespace std;
 //-------------------------- Tempat Warna --------------------------//
 #define RESET			"\033[0m"
 
-// WARNA TEKS
+// MAKRO WARNA TEKS
 #define GRAY 			"\033[30m"
 #define RED 			"\033[31m"
 #define GREEN 			"\033[32m"
@@ -23,7 +23,7 @@ using namespace std;
 #define CYAN 			"\033[36m"
 #define WHITE 			"\033[37m"
 
-// WARNA TEKS CERAH
+// MAKRO WARNA TEKS CERAH
 #define GRAY_LIGHT 		"\033[1;30m"
 #define RED_LIGHT 		"\033[1;31m"
 #define GREEN_LIGHT 	"\033[1;32m"
@@ -33,7 +33,7 @@ using namespace std;
 #define CYAN_LIGHT 		"\033[1;36m"
 #define WHITE_LIGHT 	"\033[1;37m"
 
-// WARNA BACKGROUND
+// MAKRO WARNA BACKGROUND
 #define GRAY_BG	 		"\033[40m"
 #define RED_BG	 		"\033[41m"
 #define GREEN_BG		"\033[42m"
@@ -43,7 +43,7 @@ using namespace std;
 #define CYAN_BG	 		"\033[46m"
 #define WHITE_BG		"\033[47m"
 
-// WARNA BACKGROUND CERAH
+// MAKRO WARNA BACKGROUND CERAH
 #define GRAY_BG_LIGHT 	 "\033[1;40m"
 #define RED_BG_LIGHT 	 "\033[1;41m"
 #define GREEN_BG_LIGHT 	 "\033[1;42m"
@@ -54,6 +54,14 @@ using namespace std;
 #define WHITE_BG_LIGHT 	 "\033[1;47m"
 
 //----------------------- Akhir Tempat Warna -----------------------//
+
+// MAKRO GAYA TEKS
+#define BOLD 	 	"\033[1m"
+#define ITALIC 	 	"\033[3m"
+#define UNDERLINE 	"\033[4m"
+#define HIDDEN	 	"\033[8m"
+#define CORET	 	"\033[9m"
+
 
 //delay eksekusion (int)
 void delay(int i){
