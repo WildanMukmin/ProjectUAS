@@ -442,6 +442,7 @@ void stage1(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -477,6 +478,7 @@ void stage1(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -512,6 +514,7 @@ void stage1(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -547,6 +550,7 @@ void stage1(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -678,6 +682,7 @@ void stage2(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -713,6 +718,7 @@ void stage2(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -748,6 +754,7 @@ void stage2(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -783,6 +790,7 @@ void stage2(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -914,6 +922,7 @@ void stage3(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -949,6 +958,7 @@ void stage3(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -984,6 +994,7 @@ void stage3(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
@@ -1019,6 +1030,7 @@ void stage3(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			system("cls");
 			gameOver();
 			break;
 		}
