@@ -1204,7 +1204,7 @@ void stage5(){
             --koY;
             createCh(koX,koY,'A');
 			system("cls");
-			lolosStage();
+			textMenang();
 			break;
 		}
 		else if (map[xx - 1][yy] == '#'){
@@ -1240,7 +1240,7 @@ void stage5(){
             ++koY;
             createCh(koX,koY,'A');
 			system("cls");
-			lolosStage();
+			textMenang();
 			break;
 		}
 		else if (map[xx + 1][yy] == '#'){
@@ -1276,7 +1276,7 @@ void stage5(){
             koX += 2;
             createCh(koX,koY,'A');
 			system("cls");
-			lolosStage();
+			textMenang();
 			break;
 		}
 		else if (map[xx][yy + 1] == '#'){
@@ -1312,7 +1312,7 @@ void stage5(){
             koX -= 2;
             createCh(koX,koY,'A');
 			system("cls");
-			lolosStage();
+			textMenang();
 			break;
 		}
 		else if (map[xx][yy - 1] == '#'){	
