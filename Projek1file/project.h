@@ -33,23 +33,26 @@ void stage3();
 // HALAMAN AWAL DAN LOADING
 void halamanAwal(){
 	system("cls");
+	print(CYAN);
 	textWelcome();
 	PlaySound(TEXT("soundHalamanAwal.wav"), NULL, SND_ASYNC | SND_LOOP);
 	getch();
 	loading(78, 16);
 	getch();
 	PlaySound(0,0,0);
+	print(RESET);
 }
 
 //tampilan awal login
 void opsiLogin(){
 	system("cls"); 
+	print(YELLOW);
 	boxOpsiLogin();
 
 	// pilihan login
 	linexy(93,21);
-	char jawab = getch();	
 	while (true){
+		char jawab = getch();	
 		if(jawab == '1'){
 			login();
 			break;
@@ -63,18 +66,22 @@ void opsiLogin(){
 		}
 	}
 
+	print(RESET);
 }
 
 // pilihan buat akun
 void createAkun(){
 	system("cls");
+	print(GREEN);
 	boxCreateAkun();
 	dataBase();
+	print(RESET);
 
 }
 
 // pilihan dari login
 void login(){
+	print(GREEN);
 	string output;
 	system("cls");
 	boxLogin();
@@ -86,6 +93,7 @@ void login(){
 	ifstream cekData;
 	cekData.open("userAkun.txt");
 
+	print(RESET);
     while(true){
         cekData >> output;
         if(output == id+pw){
@@ -93,9 +101,11 @@ void login(){
             break;
         }
 		if(cekData.eof()){
-			createText(60, 10, "LOGIN GAGAL COBA LAGI!");
+			print(GREEN);
+			createText(67, 7, "LOGIN GAGAL COBA LAGI!");
 			delay(10000);
 			system("cls");
+			print(RESET);
 			createAkun();
 			login();
 			break;
@@ -108,6 +118,7 @@ void login(){
 // login berhasil
 void transisi(){
 	system("cls");
+	print(BLUE);
 	createLineX(60, 112, 12  , 10, '-');
 	createLineX(60, 112, 14  , 10, '-');
 	createLineY(12, 14 , 59  , 10, '|' );
@@ -115,6 +126,7 @@ void transisi(){
 	createText(74, 13, "L O G I N  B E R H A S I L ");
 	loading(78, 16);
 	getch();
+	print(RESET);
 	homeGame();
 }
 
@@ -138,14 +150,15 @@ void dataBase(){
 //halaman awal game
 void homeGame(){
 	system("cls");
+	print(CYAN_LIGHT);
 	PlaySound(TEXT("contoh.wav"), NULL, SND_ASYNC | SND_LOOP);
 	tulisanFindTreasure();
 
 	// pilihan menu game
 	createText(66, 30, "Jawaban anda : y untuk melanjukan");
 	createText(66, 31, "Jawaban anda : e untuk ke beranda");
+	print(RESET);
 		char jawab; 
-
 		while(true){
 		jawab = getch();
 		if (jawab == 'Y' || jawab == 'y'){
@@ -219,6 +232,7 @@ void resetScore(){
 
 //---------------------Map Game----------------------//
 void map1(){
+	print(YELLOW);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"# A   #                                                 #           #");
 	createText(0,2 ,"#     #                                               X #           #");
@@ -250,9 +264,11 @@ void map1(){
 	createText(0,28,"#                                         X #   #       #       #   #");
 	createText(0,29,"#                                           #   #     X #       #   #");
 	createText(0,30,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #     # # #");
+	print(RESET);
 }
 
 void map2(){
+	print(MAGENTA);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"#                                               # #           # # # #");
 	createText(0,2 ,"#                                               # #           # # # #");
@@ -284,9 +300,11 @@ void map2(){
 	createText(0,28,"#     # #                                       # #           #     #");
 	createText(0,29,"#     # # X                                     # #           # A   #");
 	createText(0,30,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
+	print(RESET);
 }
 
 void map3(){
+	print(RED_LIGHT);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"#                       # # A                                       #");
 	createText(0,2 ,"#                       # #                                         #");
@@ -318,6 +336,7 @@ void map3(){
 	createText(0,28,"#                             # # #         #                       #");
 	createText(0,29,"#             # #       X     # # #         #   # #                 #");
 	createText(0,30,"# # # # # # # # # # # # # # # # # #     # # # # # # # # # # # # # # #");
+	print(RESET);
 }
 
 //---------------------Coding Game-------------------//
