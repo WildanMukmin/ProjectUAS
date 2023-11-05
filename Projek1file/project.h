@@ -48,21 +48,19 @@ void opsiLogin(){
 
 	// pilihan login
 	linexy(93,21);
-	int jawab; cin >> jawab;
-	switch(jawab){
-		case 1 :
-		login();
-		break;
-
-		case 2 :
-		createAkun();
-		login();
-		break;
-
-		default :
-		system("cls"); 
-		exit(0);
-
+	char jawab = getch();	
+	while (true){
+		if(jawab == '1'){
+			login();
+			break;
+		}else if (jawab == '2'){
+			createAkun();
+			login();
+			break;
+		}else if (jawab == '3'){
+			system("cls"); 
+			exit(0);
+		}
 	}
 
 }
@@ -144,8 +142,8 @@ void homeGame(){
 	tulisanFindTreasure();
 
 	// pilihan menu game
-	createText(62, 30, "Jawaban anda : y untuk melanjukan");
-	createText(62, 31, "Jawaban anda : e untuk ke beranda");
+	createText(66, 30, "Jawaban anda : y untuk melanjukan");
+	createText(66, 31, "Jawaban anda : e untuk ke beranda");
 		char jawab; 
 
 		while(true){
