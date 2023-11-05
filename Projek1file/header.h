@@ -153,7 +153,7 @@ void createCh(int x, int y, char text){
 
 // singkatan cout
 void print(auto kata){
-	cout << BOLD << kata << RESET <<endl;
+	cout << kata << endl;
 }
 
 // move player
