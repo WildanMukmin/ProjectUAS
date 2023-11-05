@@ -340,6 +340,7 @@ void map3(){
 	createText(0,30,"# # # # # # # # # # # # # # # # # #     # # # # # # # # # # # # # # #");
 	print(RESET);
 }
+
 void map5(){
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"#                 #                   #                             #");
@@ -1340,7 +1341,7 @@ void alurGame(){
 	stage2();
 	stage3();
 	stage5();
-
+	PlaySound(0,0,0);
 }
 
 // game over
