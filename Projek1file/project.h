@@ -382,7 +382,6 @@ void map4(){
 	print(RESET);
   }
 
-
 void map5(){
 	print(GREEN);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
@@ -1488,6 +1487,7 @@ void stage5(){
             --koY;
             createCh(koX,koY,'A');
 			system("cls");
+			resetScore();
 			textMenang();
 			break;
 		}
@@ -1524,6 +1524,7 @@ void stage5(){
             ++koY;
             createCh(koX,koY,'A');
 			system("cls");
+			resetScore();
 			textMenang();
 			break;
 		}
@@ -1560,6 +1561,7 @@ void stage5(){
             koX += 2;
             createCh(koX,koY,'A');
 			system("cls");
+			resetScore();
 			textMenang();
 			break;
 		}
@@ -1596,6 +1598,7 @@ void stage5(){
             koX -= 2;
             createCh(koX,koY,'A');
 			system("cls");
+			resetScore();
 			textMenang();
 			break;
 		}

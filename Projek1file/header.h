@@ -271,32 +271,32 @@ void boxOpsiLogin(){
 
 // box login
 void boxLogin(){
-	createText(60,10," __| |____________________________________________| |__"	);
+	createText(60,10," __| |____________________________________________| |__ "	);
 	createText(60,11,"(__   ____________________________________________   __)"	);
-	createText(60,12,"   | |                  L O G I N                 | |"	);
-	createText(60,13,"   | |                                            | |"	);
-	createText(60,14,"   | |   Masukan Username :                       | |"	);
-	createText(60,15,"   | |                                            | |"	);
-	createText(60,16,"   | |   Masukan Password :                       | |"	);
-	createText(60,17," __| |____________________________________________| |__"	);
+	createText(60,12,"   | |                  L O G I N                 | |   "	);
+	createText(60,13,"   | |                                            | |   "	);
+	createText(60,14,"   | |   Masukan Username :                       | |   "	);
+	createText(60,15,"   | |                                            | |   "	);
+	createText(60,16,"   | |   Masukan Password :                       | |   "	);
+	createText(60,17," __| |____________________________________________| |__ "	);
 	createText(60,18,"(__   ____________________________________________   __)"	);
-	createText(60,19,"   | |                                            | |"	);
+	createText(60,19,"   | |                                            | |   "	);
 }
 
 // box buat akun
 void boxCreateAkun(){
-	createText(60,10," __| |________________________________________________________| |__"	);
+	createText(60,10," __| |________________________________________________________| |__ "	);
 	createText(60,11,"(__   ________________________________________________________   __)"	);
-	createText(60,12,"   | |              C R E A T E  A C C O U N T                | |"	);
-	createText(60,13,"   | |                                                        | |"	);
-	createText(60,14,"   | |   Format Username Berupa HURUF Semua*                  | |"	);
-	createText(60,15,"   | |   Masukan Username :                                   | |"	);
-	createText(60,16,"   | |                                                        | |"	);
-	createText(60,17,"   | |   Format Password Berupa ANGKA Semua*                  | |"	);
-	createText(60,18,"   | |   Masukan Password :                                   | |"	);
-	createText(60,19," __| |________________________________________________________| |__"	);
+	createText(60,12,"   | |              C R E A T E  A C C O U N T                | |   "	);
+	createText(60,13,"   | |                                                        | |   "	);
+	createText(60,14,"   | |   Format Username Berupa HURUF Semua*                  | |   "	);
+	createText(60,15,"   | |   Masukan Username :                                   | |   "	);
+	createText(60,16,"   | |                                                        | |   "	);
+	createText(60,17,"   | |   Format Password Berupa ANGKA Semua*                  | |   "	);
+	createText(60,18,"   | |   Masukan Password :                                   | |   "	);
+	createText(60,19," __| |________________________________________________________| |__ "	);
 	createText(60,20,"(__   ________________________________________________________   __)"	);
-	createText(60,21,"   | |                                                        | |"	);
+	createText(60,21,"   | |                                                        | |   "	);
 }
 
 // petunjuk penggunaan game
@@ -425,17 +425,17 @@ void joget(){
 // box game over
 void boxGameOver(){
 	print(RED_BG);
-	createText(60,10," __| |____________________________________________| |__"	);
+	createText(60,10," __| |____________________________________________| |__ "	);
 	createText(60,11,"(__   ____________________________________________   __)"	);
-	createText(60,12,"   | |              G A M E  O V E R !            | |"	);
-	createText(60,13,"   | |                                            | |"	);
-	createText(60,14,"   | |                                            | |"	);
-	createText(60,15,"   | |     Kembali ke Beranda  --> press B <--    | |"	);
-	createText(60,16,"   | |                                            | |"	);
-	createText(60,17,"   | |         Keluar Game     --> press N <--    | |"	);
-	createText(60,18," __| |____________________________________________| |__"	);
+	createText(60,12,"   | |              G A M E  O V E R !            | |   "	);
+	createText(60,13,"   | |                                            | |   "	);
+	createText(60,14,"   | |                                            | |   "	);
+	createText(60,15,"   | |     Kembali ke Beranda  --> press B <--    | |   "	);
+	createText(60,16,"   | |                                            | |   "	);
+	createText(60,17,"   | |         Keluar Game     --> press N <--    | |   "	);
+	createText(60,18," __| |____________________________________________| |__ "	);
 	createText(60,19,"(__   ____________________________________________   __)"	);
-	createText(60,20,"   | |                                            | |"	);
+	createText(60,20,"   | |                                            | |   "	);
 	print(RESET);
 }
 
