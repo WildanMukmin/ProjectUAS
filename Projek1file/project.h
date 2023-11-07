@@ -21,12 +21,14 @@ void gameOver();
 void map1();
 void map2();
 void map3();
+void map4();
 void map5();
 
 //---------------------------prototype Game----------------------//
 void stage1();
 void stage2();
 void stage3();
+void stage4();
 void stage5();
 
 
@@ -48,11 +50,11 @@ void halamanAwal(){
 //tampilan awal login
 void opsiLogin(){
 	system("cls"); 
-	print(YELLOW);
+	print(CYAN_LIGHT);
 	boxOpsiLogin();
 
 	// pilihan login
-	linexy(93,21);
+	linexy(96,21);
 	while (true){
 		char jawab = getch();	
 		if(jawab == '1'){
@@ -74,7 +76,7 @@ void opsiLogin(){
 // pilihan buat akun
 void createAkun(){
 	system("cls");
-	print(GREEN);
+	print(CYAN_LIGHT);
 	boxCreateAkun();
 	dataBase();
 	print(RESET);
@@ -83,13 +85,13 @@ void createAkun(){
 
 // pilihan dari login
 void login(){
-	print(GREEN);
+	print(CYAN_LIGHT);
 	string output;
 	system("cls");
 	boxLogin();
-	linexy(90, 15);
+	linexy(88, 14);
 	string id;cin>>id;
-	linexy(90, 17);
+	linexy(88, 16);
 	string pw;cin>>pw;
 
 	ifstream cekData;
@@ -103,12 +105,15 @@ void login(){
             break;
         }
 		if(cekData.eof()){
-			print(GREEN);
-			createText(67, 7, "LOGIN GAGAL COBA LAGI!");
+			print(RED);
+			createLineX(60, 112, 5  , 10, '-');
+			createLineX(60, 112, 7  , 10, '-');
+			createLineY(5, 7, 59  , 10, '|' );
+			createLineY(5, 7, 113 , 10, '|' );
+			createText(78, 6, "L O G I N  G A G A L !");
 			delay(10000);
 			system("cls");
 			print(RESET);
-			createAkun();
 			login();
 			break;
 		}
@@ -120,7 +125,7 @@ void login(){
 // login berhasil
 void transisi(){
 	system("cls");
-	print(BLUE);
+	print(GREEN);
 	createLineX(60, 112, 12  , 10, '-');
 	createLineX(60, 112, 14  , 10, '-');
 	createLineY(12, 14 , 59  , 10, '|' );
@@ -136,10 +141,10 @@ void transisi(){
 void dataBase(){
 	ofstream data;
 	string id;
-	linexy(90, 20);
+	linexy(88, 15);
 	cin >> id;
 	string pin;
-	linexy(90, 23);
+	linexy(88, 18);
 	cin >> pin;
 	data.open("userAkun.txt", ios::app);
 	data << id;
@@ -157,17 +162,17 @@ void homeGame(){
 	tulisanFindTreasure();
 
 	// pilihan menu game
-	createText(66, 30, "Jawaban anda : y untuk melanjukan");
-	createText(66, 31, "Jawaban anda : e untuk ke beranda");
+	createText(66, 30, " Klik M untuk Melanjukan");
+	createText(67, 31, "Klik B untuk ke Beranda");
 	print(RESET);
 		char jawab; 
 		while(true){
 		jawab = getch();
-		if (jawab == 'Y' || jawab == 'y'){
+		if (jawab == 'M' || jawab == 'm'){
 			alurGame();
 			system("cls");
 			exit(0);
-		}else if (jawab == 'E' || jawab == 'e'){
+		}else if (jawab == 'B' || jawab == 'b'){
 			PlaySound(0,0,0);
 			opsiLogin(); 
 			break;
@@ -234,7 +239,7 @@ void resetScore(){
 
 //---------------------Map Game----------------------//
 void map1(){
-	print(YELLOW);
+	print(GREEN);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"# A   #                                                 #           #");
 	createText(0,2 ,"#     #                                               X #           #");
@@ -270,7 +275,7 @@ void map1(){
 }
 
 void map2(){
-	print(MAGENTA);
+	print(CYAN);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"#                                               # #           # # # #");
 	createText(0,2 ,"#                                               # #           # # # #");
@@ -306,7 +311,7 @@ void map2(){
 }
 
 void map3(){
-	print(RED_LIGHT);
+	print(GREEN);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"#                       # # A                                       #");
 	createText(0,2 ,"#                       # #                                         #");
@@ -341,7 +346,45 @@ void map3(){
 	print(RESET);
 }
 
+void map4(){
+	print(CYAN);
+    createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
+    createText(0,1 ,"# # # # # # # # # # # # # # # # # #               # #               #");
+    createText(0,2 ,"#                               # #     # # # #   # #   # # # # #   #");
+    createText(0,3 ,"#     # #   # #   #     # # #   # #         # #         #     # #   #");
+    createText(0,4 ,"#     # #   # #   #     # A     # #     # # # # # # # # #     # #   #");
+    createText(0,5 ,"#     # #   # # # # # # # # # # # #     # # # # # # # # #     # #   #");
+    createText(0,6 ,"#     # #                                             # #     # #   #");
+    createText(0,7 ,"#     # # # # # # # # # # # # # # # # # # # #     # # # #     # #   #");
+    createText(0,8 ,"#     # # # # # # # # # # # # #                   # # # #     # #   #");
+    createText(0,9 ,"#     # #           # #     # # # # # # # # #     # # # #     # #   #");
+    createText(0,10,"#     # #     # # # # #     #                                 # #   #");
+    createText(0,11,"#     # #     # # # # #           # # # # # # # #   # #     # # # # #");
+    createText(0,12,"#     # #                   # #   # # # # # # # #   # #     # # # # #");
+    createText(0,13,"#     # # # # # # # # # # # # #   # # X       # #   # #             #");
+    createText(0,14,"#         # #           # # # #   # # # #     # #   # # # # # # #   #");
+    createText(0,15,"# # # #         # # #     # # #   # #         # #   # # # # # # #   #");
+    createText(0,16,"# # # # # # # # # # #     # # #   # #     # # # #   # #     # # #   #");
+    createText(0,17,"#         # # # # # #     # # # # # #     # # # #   # #     # # #   #");
+    createText(0,18,"#         # # # # # #     # # # # # #               # #     # # #   #");
+    createText(0,19,"#   # #   # # # # # #   # # #   # # # # # # # # # # # #     # # #   #");
+    createText(0,20,"#   # #         # # #   # # #   # # # # # # #                       #");
+    createText(0,21,"#   # #   # #   # # #   # # #   # # # # # # # # # # # #             #");
+    createText(0,22,"#   # #   # #           # # #   # # #               # #     # #   # #");
+    createText(0,23,"#   # #   # # # # # # # # # #   # # #     # #       # #     # #   # #");
+    createText(0,24,"#   # #   # # # # # # # # # #   # # #     # #               # #   # #");
+    createText(0,25,"#   # #                         # # #     # #   # # # # # # # #   # #");
+    createText(0,26,"#   # # # # # # # # # # # # # # # # #     # #   # # # # # # # #   # #");
+    createText(0,27,"#   # #             # X           # #     # #   # #         # #   # #");
+    createText(0,28,"#           # #     # # # # #     # #     # #   # #   # #   # #   # #");
+    createText(0,29,"#   # #     # #                   # #     # #         # #   # # # # #");
+    createText(0,30,"# # # # # # # # # # # # # # # # # # #     # # # # # # # # # # # # # #");
+	print(RESET);
+  }
+
+
 void map5(){
+	print(GREEN);
 	createText(0,0 ,"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	createText(0,1 ,"#                 #                   #                             #");
 	createText(0,2 ,"#     # # # # # # # # #   #   #   #   #   # # # # # # # # # # # #   #");
@@ -373,6 +416,7 @@ void map5(){
 	createText(0,28,"#   # # # # #   #                     #     #   #   #   #       #   #");
 	createText(0,29,"#               #                               #               #   #");
 	createText(0,30,"# # # # # # # # # # # # # # # # #   # # # # # # # # # # # # # # # # #");
+	print(RESET);
 }
 
 //---------------------Coding Game-------------------//
@@ -451,9 +495,9 @@ void stage1(){
 	//------------------------------Posisi Score---------------------------//
 
 		linexy(98,11);
-		cout<< readAktifScore();
+		cout<< YELLOW<< readAktifScore()<< RESET;
 		linexy(107,13);
-		cout<<readScore();
+		cout<<YELLOW<<readScore()<<RESET;
 		linexy(koX,koY);
 
 	//----------------------------akhir posisi score-----------------------//
@@ -690,9 +734,9 @@ void stage2(){
 	//------------------------------Posisi Score---------------------------//
 
 		linexy(98,11);
-		cout<< readAktifScore();
+		cout<<YELLOW<<readAktifScore()<<RESET;
 		linexy(107,13);
-		cout<<readScore();
+		cout<<YELLOW<<readScore()<<RESET;
 		linexy(koX,koY);
 
 	//-------------------------------akhir posisi score-----------------------//
@@ -929,9 +973,248 @@ void stage3(){
 	//------------------------------Posisi Score---------------------------//
 
 		linexy(98,11);
-		cout<< readAktifScore();
+		cout<< YELLOW<<readAktifScore()<<RESET;
 		linexy(107,13);
-		cout<<readScore();
+		cout<<YELLOW<<readScore()<<RESET;
+		linexy(koX,koY);
+
+	//-------------------------------akhir posisi score-----------------------//
+
+
+	//--------------------------------- Control User ----------------------------//
+	player = getch();
+
+	if     (player == 'w' || player == 'W'){
+		if(map[xx - 1][yy] == ' '){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx - 1][yy] == 'X'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx - 1][yy] == '.'){
+			map[xx - 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			--xx;
+            createCh(koX,koY,' ');
+            --koY;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx - 1][yy] == '#'){
+			resetScore();
+			system("cls");
+			gameOver();
+			break;
+		}
+	}
+	else if(player == 's' || player == 'S'){
+		if(map[xx + 1][yy] == ' '){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx + 1][yy] == 'X'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx + 1][yy] == '.'){
+			map[xx + 1][yy] = 'A';
+			map[xx][yy] = ' ';
+			++xx;
+            createCh(koX,koY,' ');
+            ++koY;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx + 1][yy] == '#'){
+			resetScore();
+			system("cls");
+			gameOver();
+			break;
+		}
+	}
+	else if(player == 'd' || player == 'D'){
+		if(map[xx][yy + 1] == ' '){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx][yy + 1] == 'X'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx][yy + 1] == '.'){
+			map[xx][yy + 1] = 'A';
+			map[xx][yy] = ' ';
+			++yy;
+            createCh(koX,koY,' ');
+            koX += 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx][yy + 1] == '#'){
+			resetScore();
+			system("cls");
+			gameOver();
+			break;
+		}
+	}
+	else if(player == 'a' || player == 'A'){
+		if(map[xx][yy - 1] == ' '){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+		}
+		else if(map[xx][yy - 1] == 'X'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			aktifScore(50);
+		}
+		else if(map[xx][yy - 1] == '.'){
+			map[xx][yy - 1] = 'A';
+			map[xx][yy] = ' ';
+			--yy;
+            createCh(koX,koY,' ');
+            koX -= 2;
+            createCh(koX,koY,'A');
+			system("cls");
+			lolosStage();
+			break;
+		}
+		else if (map[xx][yy - 1] == '#'){	
+			resetScore();
+			system("cls");
+			gameOver();
+			break;
+		}
+	}
+	else if(player == 'p' || player == 'P'){
+		resetScore();
+		system("cls");
+		homeGame();
+		break;
+	}
+	//-------------------------------- end Control User ----------------------------//
+	}
+}
+
+void stage4(){
+	system("cls");
+    map4();
+	char player;
+	int xx, yy,koX,koY,totalScore, highScore;
+	xx = 4; //ini untuk char
+	yy =13; //ini untuk char
+    koX = 26; //ini untuk map()
+    koY = 4; //ini untuk map()
+	highScore = 0;
+	boxControlGuide();
+
+
+	char map [31][35] = {
+	//	 a   b   c   d   e   f   g   h   i   j   k   l   m   n   o   p   q   r   s   t   u   v   w   x   y   z  aa   ab  ac  ad  ae  af  ag  ah  ai  
+        '#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#',
+		'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ',' ',' ',' ',' ',' ','#','#',' ',' ',' ',' ',' ',' ',' ','#',
+	    '#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#',' ',' ','#','#','#','#',' ','#','#',' ','#','#','#','#','#',' ','#',
+		'#',' ',' ','#','#',' ','#','#',' ','#',' ',' ','#','#','#',' ','#','#',' ',' ',' ',' ','#','#',' ',' ',' ',' ','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#',' ','#','#',' ','#',' ',' ','#','A',' ',' ','#','#',' ',' ','#','#','#','#','#','#','#','#','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#',' ','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ','#','#','#','#','#','#','#','#','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ','#','#','#','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#','#','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#',' ',' ',' ',' ',' ','#','#',' ',' ','#','#','#','#','#','#','#','#','#',' ',' ','#','#','#','#',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#',' ',' ','#','#','#','#','#',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#',' ','#',
+		'#',' ',' ','#','#',' ',' ','#','#','#','#','#',' ',' ',' ',' ',' ','#','#','#','#','#','#','#','#',' ','#','#',' ',' ','#','#','#','#','#',
+		'#',' ',' ','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#',' ','#','#','#','#','#','#','#','#',' ','#','#',' ',' ','#','#','#','#','#',
+		'#',' ',' ','#','#','#','#','#','#','#','#','#','#','#','#','#',' ','#','#','X',' ',' ',' ','#','#',' ','#','#',' ',' ',' ',' ',' ',' ','#',
+        '#',' ',' ',' ',' ','#','#',' ',' ',' ',' ',' ','#','#','#','#',' ','#','#','#','#',' ',' ','#','#',' ','#','#','#','#','#','#','#',' ','#',
+		'#','#','#','#',' ',' ',' ',' ','#','#','#',' ',' ','#','#','#',' ','#','#',' ',' ',' ',' ','#','#',' ','#','#','#','#','#','#','#',' ','#',
+		'#','#','#','#','#','#','#','#','#','#','#',' ',' ','#','#','#',' ','#','#',' ',' ','#','#','#','#',' ','#','#','#','#','#','#','#',' ','#',
+		'#',' ',' ',' ',' ','#','#','#','#','#','#',' ',' ','#','#','#','#','#','#',' ',' ','#','#','#','#',' ','#','#',' ',' ','#','#','#',' ','#',
+		'#',' ',' ',' ',' ','#','#','#','#','#','#',' ',' ','#','#','#','#','#','#',' ',' ',' ',' ',' ',' ',' ','#','#',' ',' ','#','#','#',' ','#',
+	    '#',' ','#','#',' ','#','#','#','#','#','#',' ','#','#','#',' ','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ','#','#','#',' ','#',
+	    '#',' ','#','#',' ',' ',' ',' ','#','#','#',' ','#','#','#',' ','#','#','#','#','#','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#',
+    	'#',' ','#','#',' ','#','#',' ','#','#','#',' ','#','#','#',' ','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ',' ',' ',' ',' ','#',
+	    '#',' ','#','#',' ','#','#',' ',' ',' ',' ',' ','#','#','#',' ','#','#','#',' ',' ',' ',' ',' ',' ',' ','#','#',' ',' ','#','#',' ','#','#',
+		'#',' ','#','#',' ','#','#','#','#','#','#','#','#','#','#',' ','#','#','#',' ',' ','#','#',' ',' ',' ','#','#',' ',' ','#','#',' ','#','#',
+		'#',' ','#','#',' ','#','#','#','#','#','#','#','#','#','#',' ','#','#','#',' ',' ','#','#',' ',' ',' ',' ',' ',' ',' ','#','#',' ','#','#',
+		'#',' ','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#','#',' ',' ','#','#',' ','#','#','#','#','#','#','#','#',' ','#','#',
+		'#',' ','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#',' ',' ','#','#',' ','#','#','#','#','#','#','#','#',' ','#','#',
+		'#',' ','#','#',' ',' ',' ',' ',' ',' ','#','X',' ',' ',' ',' ',' ','#','#',' ',' ','#','#',' ','#','#',' ',' ',' ',' ',' ','#',' ','#','#',
+		'#',' ',' ',' ',' ',' ','#','#',' ',' ','#','#','#','#','#',' ',' ','#','#',' ',' ','#','#',' ','#','#',' ',' ','#','#',' ','#',' ','#','#',
+		'#',' ','#','#',' ',' ','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#','#',' ',' ','#','#',' ',' ',' ',' ',' ','#','#',' ','#','#','#','#',
+		'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','.','.','#','#','#','#','#','#','#','#','#','#','#','#','#','#'
+	};
+	
+
+	//------------------------awal check Map----------------------//
+	/*	
+		linexy(0,0);
+
+		for(int i = 0; i<31 ; i++){
+			for(int j = 0; j<35; j++){
+				cout<<map[i][j]<<" ";
+			}
+			cout<<endl;
+		}
+	*/
+	//------------------------akhir check Map----------------------//
+
+    map [xx][yy] = 'A';
+    createCh(koX, koY, 'A');
+    while(true){
+		
+		if(readAktifScore() >= highScore){
+			highScore = readAktifScore();
+			score(highScore);
+		}
+
+	//------------------------------Posisi Score---------------------------//
+
+		linexy(98,11);
+		cout<<YELLOW<< readAktifScore()<<RESET;
+		linexy(107,13);
+		cout<<YELLOW<< readScore()<<RESET;
 		linexy(koX,koY);
 
 	//-------------------------------akhir posisi score-----------------------//
@@ -1168,9 +1451,9 @@ void stage5(){
 	//------------------------------Posisi Score---------------------------//
 
 		linexy(98,11);
-		cout<< readAktifScore();
+		cout<<YELLOW<< readAktifScore()<<RESET;
 		linexy(107,13);
-		cout<<readScore();
+		cout<<YELLOW<< readScore()<<RESET;
 		linexy(koX,koY);
 
 	//-------------------------------akhir posisi score-----------------------//
@@ -1340,6 +1623,7 @@ void alurGame(){
 	stage1();
 	stage2();
 	stage3();
+	stage4();
 	stage5();
 	PlaySound(0,0,0);
 }
@@ -1359,6 +1643,5 @@ void gameOver(){
 		exit(0);
 	}
 	}
-
 }
 

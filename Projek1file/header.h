@@ -148,7 +148,7 @@ void createText(int x, int y, string text ,int tahan = 0){
 // create char
 void createCh(int x, int y, char text){
 	linexy(x, y);
-	cout << text;
+	cout <<MAGENTA<< text <<RESET;
 }
 
 // singkatan cout
@@ -216,14 +216,6 @@ void tulisanFindTreasure(){
 	createText(37, 28 , "    \\_/_________________________________________________________________________________________/."		);	
 }
 
-//tulisan welcome
-void tulisanwelcome(){
-	createText(43,8,  "||           ||  |||||||||  ||         ||||||||  |||||||||  ||            ||  |||||||||",50);
-	createText(43,9,  "||     ||    ||  ||         ||        ||         ||     ||  || ||      || ||  ||       ",50);
-	createText(43,10, "||   ||  ||  ||  |||||||||  ||        ||         ||     ||  ||   ||  ||   ||  |||||||||",50);
-	createText(43,11, "|| ||     || ||  ||         ||        ||         ||     ||  ||     ||     ||  ||       ",50);
-	createText(43,12, "||           ||  |||||||||  |||||||||  ||||||||  |||||||||  ||            ||  |||||||||",50);
-}
 
 //tulisan welcome
 void textWelcome(){
@@ -255,27 +247,25 @@ void boxOpsiLogin(){
 	createText(54,11,".-----------/         `------------------/         `--------------.");
 	createText(54,12,"| .---------`         /------------------`         /------------. |");
 	createText(54,13,"| |          `.`..`..'                    `.'...'.'             | |");
-	createText(54,14,"| |                    P I L I H  O P S I                       | |");
+	createText(54,14,"| |                        B E R A N D A                        | |");
 	createText(54,15,"| |                                                             | |");
 	createText(54,16,"| |                                                             | |");
-	createText(54,17,"| |            1. LOGIN   2. BUAT AKUN   3. KELUAR              | |");
-	createText(54,18,"| |                                                             | |");
-	createText(54,19,"| |                                                             | |");
+	createText(54,17,"| |     1. LOGIN                                                | |");
+	createText(54,18,"| |     2. BUAT AKUN                                            | |");
+	createText(54,19,"| |     3. KELUAR                                               | |");
 	createText(54,20,"| |                                                             | |");
-	createText(54,21,"| |                     JAWABAN ANDA :                          | |");
+	createText(54,21,"| |                        JAWABAN ANDA :                       | |");
 	createText(54,22,"| |                                                             | |");
 	createText(54,23,"| |                                                             | |");
-	createText(54,24,"| |                                                             | |");
-	createText(54,25,"| |                                                             | |");
-	createText(54,26,"| |_____________________________________________________________| |");
-	createText(54,27,"|_________________________________________________________________|");
-	createText(54,28,"                   )__________|__|__________(");
-	createText(54,29,"                  |            ||            |");
-	createText(54,30,"                  |____________||____________|");
-	createText(54,31,"                    ),-----.(      ),-----.(");
-	createText(54,32,"                  ,'   ..   `     '    ..   `.");
-	createText(54,33,"                 /            )  (           '");
-	createText(54,34,"                 `..........'    `...........'");
+	createText(54,24,"| |_____________________________________________________________| |");
+	createText(54,25,"|_________________________________________________________________|");
+	createText(54,26,"                   )__________|__|__________(");
+	createText(54,27,"                  |            ||            |");
+	createText(54,28,"                  |____________||____________|");
+	createText(54,29,"                    ),-----.(      ),-----.(");
+	createText(54,30,"                  ,'   ..   `     '    ..   `.");
+	createText(54,31,"                 /            )  (           '");
+	createText(54,32,"                 `..........'    `...........'");
 
 }
 
@@ -283,76 +273,73 @@ void boxOpsiLogin(){
 void boxLogin(){
 	createText(60,10," __| |____________________________________________| |__"	);
 	createText(60,11,"(__   ____________________________________________   __)"	);
-	createText(60,12,"   | |              F O R M  L O G I N            | |"	);
+	createText(60,12,"   | |                  L O G I N                 | |"	);
 	createText(60,13,"   | |                                            | |"	);
-	createText(60,14,"   | |                                            | |"	);
-	createText(60,15,"   | |     Masukan Username :                     | |"	);
-	createText(60,16,"   | |                                            | |"	);
-	createText(60,17,"   | |     Masukan Password :                     | |"	);
-	createText(60,18," __| |____________________________________________| |__"	);
-	createText(60,19,"(__   ____________________________________________   __)"	);
-	createText(60,20,"   | |                                            | |"	);
+	createText(60,14,"   | |   Masukan Username :                       | |"	);
+	createText(60,15,"   | |                                            | |"	);
+	createText(60,16,"   | |   Masukan Password :                       | |"	);
+	createText(60,17," __| |____________________________________________| |__"	);
+	createText(60,18,"(__   ____________________________________________   __)"	);
+	createText(60,19,"   | |                                            | |"	);
 }
 
 // box buat akun
 void boxCreateAkun(){
 	createText(60,10," __| |________________________________________________________| |__"	);
 	createText(60,11,"(__   ________________________________________________________   __)"	);
-	createText(60,12,"   | |                   C R E A T E  A K U N                 | |"	);
+	createText(60,12,"   | |              C R E A T E  A C C O U N T                | |"	);
 	createText(60,13,"   | |                                                        | |"	);
-	createText(60,14,"   | |                                                        | |"	);
-	createText(60,15,"   | |                                                        | |"	);
+	createText(60,14,"   | |   Format Username Berupa HURUF Semua*                  | |"	);
+	createText(60,15,"   | |   Masukan Username :                                   | |"	);
 	createText(60,16,"   | |                                                        | |"	);
-	createText(60,17,"   | |                                                        | |"	);
-	createText(60,18,"   | |                                                        | |"	);
-	createText(60,19,"   | |     Format Username Berupa HURUF Semua *               | |"	);
-	createText(60,20,"   | |     Masukan Username :                                 | |"	);
+	createText(60,17,"   | |   Format Password Berupa ANGKA Semua*                  | |"	);
+	createText(60,18,"   | |   Masukan Password :                                   | |"	);
+	createText(60,19," __| |________________________________________________________| |__"	);
+	createText(60,20,"(__   ________________________________________________________   __)"	);
 	createText(60,21,"   | |                                                        | |"	);
-	createText(60,22,"   | |     Format Password Berupa ANGKA Semua *               | |"	);
-	createText(60,23,"   | |     Masukan Password :                                 | |"	);
-	createText(60,24," __| |________________________________________________________| |__"	);
-	createText(60,25,"(__   ________________________________________________________   __)"	);
-	createText(60,26,"   | |                                                        | |"	);
 }
 
 // petunjuk penggunaan game
 void boxControlGuide(){
+	print(MAGENTA);
 	createText(77,0 ," __________________________________________________________________"	);
 	createText(77,1 ,"(__   ________________________________________________________   __)"	);
-	createText(77,2 ,"   | |                    TOOLS INFORMATION !!                | |"	);
+	createText(77,2 ,"   | |           T O O L S  I N F O R M A T I O N !           | |"	);
 	createText(77,3 ,"   | |                                                        | |"	);
-	createText(77,4 ,"   | |   W  ==>  M O V E  U P                                 | |"	);
-	createText(77,5 ,"   | |   S  ==>  M O V E  D O W N                             | |"	);
-	createText(77,6 ,"   | |   D  ==>  M O V E  R I G H T                           | |"	);
-	createText(77,7 ,"   | |   A  ==>  M O V E  L E F T                             | |"	);
+	createText(77,4 ,"   | |   W  ==>  A T A S                                      | |"	);
+	createText(77,5 ,"   | |   S  ==>  B A W A H                                    | |"	);
+	createText(77,6 ,"   | |   D  ==>  K A N A N                                    | |"	);
+	createText(77,7 ,"   | |   A  ==>  K I R I                                      | |"	);
 	createText(77,8 ,"   | |                                                        | |"	);
-	createText(77,9 ,"   | |   P  ==>  B A C K  T O  L O B B Y                      | |"	);
+	createText(77,9 ,"   | |   P  ==>  K E M B A L I  K E  M E N U                  | |"	);
 	createText(77,10,"   | |                                                        | |"	);
 	createText(77,11,"   | |   S C O R E :                                          | |"	);
 	createText(77,12,"   | |                                                        | |"	);
 	createText(77,13,"   | |   H I G H  S C O R E :                                 | |"	);
 	createText(77,14," __| |________________________________________________________| |__"	);
 	createText(77,15,"(__   ________________________________________________________   __)"	);
-	createText(77,16,"   | |                    G A M E  G U I D E                  | |"	);
+	createText(77,16,"   | |                  H O W  T O  P L A Y                   | |"	);
 	createText(77,17,"   | |                                                        | |"	);
-	createText(77,18,"   | |   RULES !!                                             | |"	);
-	createText(77,19,"   | |                                                        | |"	);
-	createText(77,20,"   | |   1. DILARANG MENABRAK TEMBOK!!                        | |"	);
-	createText(77,21,"   | |   2. UNTUK MENAMBAH POIN DI DAPAT DENGAN :             | |"	);
-	createText(77,22,"   | |      a. MENEMUKAN HARTA KARUN                          | |"	);
-	createText(77,23,"   | |      B. MENEMUKAN JALAN KELUAR                         | |"	);
-	createText(77,24,"   | |         DAN MELANJUTKAN KE STAGE BERIKUTNYA!           | |"	);
-	createText(77,25,"   | |   3. PENCAPAIAN MU AKAN DI REKAM DAN DI TAMPILKAN.     | |"	);
+	createText(77,18,"   | |   1. KUMPULKAN HARTA MU (X) UNTUK MENINGKATKAN SCORE   | |"	);
+	createText(77,19,"   | |   2. HINDARI MENABRAK DINDING (#) ATAU GAME AKAN       | |"	);
+	createText(77,20,"   | |      BERAKHIR DENGAN HASIL SCORE YANG TERAKHIR KAMU    | |"	);
+	createText(77,21,"   | |      DAPATKAN                                          | |"	);
+	createText(77,22,"   | |   3. SETIAP HARTA (X) YANG KAMU KUMPULKAN BERNILAI     | |"	);
+	createText(77,23,"   | |      50 POIN                                           | |"	);
+	createText(77,24,"   | |   4. KUMPULKAN HARTA SEBANYAKNYA DAN JELAJAHI SETIAP   | |"	);
+	createText(77,25,"   | |      DAERAH PETUALANGAN NYA                            | |"	);
 	createText(77,26,"   | |                                                        | |"	);
-	createText(77,27,"   | |                   SEMOGA BERHASIL :)                   | |"	);
+	createText(77,27,"   | |          S E L A M A T  M E N J E L A J A H !          | |"	);
 	createText(77,28," __| |________________________________________________________| |__"	);
 	createText(77,29,"(__________________________________________________________________)"	);
+	print(RESET);
 }
 
 //transisi lolos stage
 void lolosStage(){
+	print(GREEN);
 	createText(60,5 ," _____________________________________________ ");
-	createText(60,6 ,"|.'',       LANJUT STAGE BERIKUTNYA       ,''.|");
+	createText(60,6 ,"|.'',           L E V E L  U P !          ,''.|");
 	createText(60,7 ,"|.'.'',                                 ,''.'.|");
 	createText(60,8 ,"|.'.'.'',                             ,''.'.'.|");
 	createText(60,9 ,"|.'.'.'.'',                         ,''.'.'.'.|");
@@ -371,71 +358,73 @@ void lolosStage(){
 	createText(60,22,"|.'.','         /%%%%%%%%%%%%%\\         ','.'.|");
 	createText(60,23,"|.','          /%%%%%%%%%%%%%%%\\          ','.|");
 	createText(60,24,"|;____________/%%%%%%%%%%%%%%%%%\\____________;|");
+	print(RESET);
 	getch();
 }
 
 // animasi orang joget
 void joget(){
 	for(int i  = 0 ; i<=2; i++){
-createText(10,10," o       ");
-createText(10,11,"/|l      ");
-createText(10,12,"/ l      ");
-delay(800);
+		createText(10,10," o       ");
+		createText(10,11,"/|l      ");
+		createText(10,12,"/ l      ");
+		delay(800);
 
-createText(10,10,"l o /    ");
-createText(10,11,"  |      ");
-createText(10,12," / l     ");
-delay(800);
+		createText(10,10,"l o /    ");
+		createText(10,11,"  |      ");
+		createText(10,12," / l     ");
+		delay(800);
 
-createText(10,10,"_ o      ");
-createText(10,11," /l      ");
-createText(10,12,"| l      ");
-delay(800);
-       
-createText(10,10,"___lo    ");
-createText(10,11,"/)  |    ");
-createText(10,12,"         ");
-delay(800);
+		createText(10,10,"_ o      ");
+		createText(10,11," /l      ");
+		createText(10,12,"| l      ");
+		delay(800);
+			
+		createText(10,10,"___lo    ");
+		createText(10,11,"/)  |    ");
+		createText(10,12,"         ");
+		delay(800);
 
-createText(10,10," __|     ");
-createText(10,11,"   lo    ");
-createText(10,12,"   ( l   ");
-delay(800);
+		createText(10,10," __|     ");
+		createText(10,11,"   lo    ");
+		createText(10,12,"   ( l   ");
+		delay(800);
 
-createText(10,10,"l /      ");
-createText(10,11," |       ");
-createText(10,12,"/ol      ");
-delay(800);
+		createText(10,10,"l /      ");
+		createText(10,11," |       ");
+		createText(10,12,"/ol      ");
+		delay(800);
 
-createText(10,10,"     |__ ");
-createText(10,11,"   o/    ");
-createText(10,12," / )     ");
-delay(800);
+		createText(10,10,"     |__ ");
+		createText(10,11,"   o/    ");
+		createText(10,12," / )     ");
+		delay(800);
 
-createText(10,10,"   o _   ");
-createText(10,11,"   /l    ");
-createText(10,12,"   / |   ");
-delay(800);
+		createText(10,10,"   o _   ");
+		createText(10,11,"   /l    ");
+		createText(10,12,"   / |   ");
+		delay(800);
 
-createText(10,10,"l o /    ");
-createText(10,11,"  |      ");
-createText(10,12," / l     ");
-delay(800);
+		createText(10,10,"l o /    ");
+		createText(10,11,"  |      ");
+		createText(10,12," / l     ");
+		delay(800);
 
-createText(10,10," o       ");
-createText(10,11,"/|l	  ");
-createText(10,12,"/ l	  ");
-delay(800);
+		createText(10,10," o       ");
+		createText(10,11,"/|l	  ");
+		createText(10,12,"/ l	  ");
+		delay(800);
 
-createText(10,10,"o/__	  ");
-createText(10,11," |  (l	  ");
-createText(10,12,"      	  ");
-delay(800);
+		createText(10,10,"o/__	  ");
+		createText(10,11," |  (l	  ");
+		createText(10,12,"      	  ");
+		delay(800);
 	}
 }
 
 // box game over
 void boxGameOver(){
+	print(RED_BG);
 	createText(60,10," __| |____________________________________________| |__"	);
 	createText(60,11,"(__   ____________________________________________   __)"	);
 	createText(60,12,"   | |              G A M E  O V E R !            | |"	);
@@ -447,6 +436,7 @@ void boxGameOver(){
 	createText(60,18," __| |____________________________________________| |__"	);
 	createText(60,19,"(__   ____________________________________________   __)"	);
 	createText(60,20,"   | |                                            | |"	);
+	print(RESET);
 }
 
 //tulisan MENANG
