@@ -1643,6 +1643,8 @@ void gameOver(){
 		break;
 	}else if(parameter == 'N' || parameter == 'n'){
 		system("cls");
+		PlaySound(0,0,0);
+		opsiLogin();
 		exit(0);
 	}
 	}
