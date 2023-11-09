@@ -8,13 +8,13 @@ void transisi();
 void createAkun();
 void login();
 void opsiLogin();
-void score(int score);
 int readScore();
 void alurGame();
-void aktifScore(int score);
 int readAktifScore();
 void resetScore();
 void gameOver();
+void score(int score);
+void aktifScore(int score);
 
 
 //---------------------------prototype Map----------------------//
@@ -521,6 +521,7 @@ void stage1(){
             createCh(koX,koY,' ');
             --koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx - 1][yy] == '.'){
@@ -536,6 +537,7 @@ void stage1(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -557,6 +559,7 @@ void stage1(){
             createCh(koX,koY,' ');
             ++koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx + 1][yy] == '.'){
@@ -572,6 +575,7 @@ void stage1(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -593,6 +597,7 @@ void stage1(){
             createCh(koX,koY,' ');
             koX += 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy + 1] == '.'){
@@ -608,6 +613,7 @@ void stage1(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -629,6 +635,7 @@ void stage1(){
             createCh(koX,koY,' ');
             koX -= 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy - 1] == '.'){
@@ -644,6 +651,7 @@ void stage1(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -760,6 +768,7 @@ void stage2(){
             createCh(koX,koY,' ');
             --koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx - 1][yy] == '.'){
@@ -775,6 +784,7 @@ void stage2(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -796,6 +806,7 @@ void stage2(){
             createCh(koX,koY,' ');
             ++koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx + 1][yy] == '.'){
@@ -811,6 +822,7 @@ void stage2(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -832,6 +844,7 @@ void stage2(){
             createCh(koX,koY,' ');
             koX += 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy + 1] == '.'){
@@ -847,6 +860,7 @@ void stage2(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -868,6 +882,7 @@ void stage2(){
             createCh(koX,koY,' ');
             koX -= 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy - 1] == '.'){
@@ -883,6 +898,7 @@ void stage2(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -999,6 +1015,7 @@ void stage3(){
             createCh(koX,koY,' ');
             --koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx - 1][yy] == '.'){
@@ -1014,6 +1031,7 @@ void stage3(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1035,6 +1053,7 @@ void stage3(){
             createCh(koX,koY,' ');
             ++koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx + 1][yy] == '.'){
@@ -1050,6 +1069,7 @@ void stage3(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1071,6 +1091,7 @@ void stage3(){
             createCh(koX,koY,' ');
             koX += 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy + 1] == '.'){
@@ -1086,6 +1107,7 @@ void stage3(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1107,6 +1129,7 @@ void stage3(){
             createCh(koX,koY,' ');
             koX -= 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy - 1] == '.'){
@@ -1122,6 +1145,7 @@ void stage3(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1238,6 +1262,7 @@ void stage4(){
             createCh(koX,koY,' ');
             --koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx - 1][yy] == '.'){
@@ -1253,6 +1278,7 @@ void stage4(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1274,6 +1300,7 @@ void stage4(){
             createCh(koX,koY,' ');
             ++koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx + 1][yy] == '.'){
@@ -1289,6 +1316,7 @@ void stage4(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1310,6 +1338,7 @@ void stage4(){
             createCh(koX,koY,' ');
             koX += 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy + 1] == '.'){
@@ -1325,6 +1354,7 @@ void stage4(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1346,6 +1376,7 @@ void stage4(){
             createCh(koX,koY,' ');
             koX -= 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy - 1] == '.'){
@@ -1361,6 +1392,7 @@ void stage4(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1477,6 +1509,7 @@ void stage5(){
             createCh(koX,koY,' ');
             --koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx - 1][yy] == '.'){
@@ -1493,6 +1526,7 @@ void stage5(){
 		}
 		else if (map[xx - 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1514,6 +1548,7 @@ void stage5(){
             createCh(koX,koY,' ');
             ++koY;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx + 1][yy] == '.'){
@@ -1530,6 +1565,7 @@ void stage5(){
 		}
 		else if (map[xx + 1][yy] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1551,6 +1587,7 @@ void stage5(){
             createCh(koX,koY,' ');
             koX += 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy + 1] == '.'){
@@ -1567,6 +1604,7 @@ void stage5(){
 		}
 		else if (map[xx][yy + 1] == '#'){
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1588,6 +1626,7 @@ void stage5(){
             createCh(koX,koY,' ');
             koX -= 2;
             createCh(koX,koY,'A');
+			PlaySound(TEXT("collect.wav"), NULL, SND_ASYNC);
 			aktifScore(50);
 		}
 		else if(map[xx][yy - 1] == '.'){
@@ -1604,6 +1643,7 @@ void stage5(){
 		}
 		else if (map[xx][yy - 1] == '#'){	
 			resetScore();
+			PlaySound(TEXT("kalah.wav"), NULL, SND_SYNC);
 			system("cls");
 			gameOver();
 			break;
@@ -1629,6 +1669,7 @@ void alurGame(){
 	stage4();
 	stage5();
 	PlaySound(0,0,0);
+	opsiLogin();
 }
 
 // game over

@@ -372,7 +372,7 @@ void boxGameOver(){
 
 //tulisan MENANG
 void textMenang(){
-	PlaySound(TEXT("laguMenang.wav"), NULL, SND_ASYNC | SND_LOOP);
+	PlaySound(TEXT("menang.wav"), NULL, SND_ASYNC | SND_LOOP);
 	print(CYAN_LIGHT);
 	createText(30,5 ," _____                                                                                     _____ ");
 	createText(30,6 ,"( ___ )-----------------------------------------------------------------------------------( ___ )");
