@@ -66,14 +66,6 @@ using namespace std;
 #define CORET	 	"\033[9m"
 
 
-//delay eksekusion (int)
-void delay(int i){
-	int count = 0;
-	while( count < i*100000 ){
-		count++;
-	}
-}
-
 // set koordinat
 void linexy (int x, int y){
 	COORD coord;
@@ -90,13 +82,13 @@ void loading(int x, int y){
 	linexy(x, y);
 	for(int i = 0; i<=12; i++ ){
 		cout << load[i];
-		delay(50);
+		Sleep(100);
 	}
 	
 	for(int i = 0 ; i<= 100 ; i++){
 		linexy(x+13, y);
 		cout << " "<< i << " %";//13
-		delay(100);
+		Sleep(10);
 	}
 }
 
@@ -107,13 +99,13 @@ void createLineX (int x, int toX, int y, int tahan = 0, char style = '#'){
 		for(int i = x; i <= toX; i++){
 			linexy(i, y);
 			printf("-");
-			delay(tahan);
+			Sleep(tahan);
 		}
 	}else {
 		for(int i = x; i <= toX; i++){
 			linexy(i, y);
 			printf("#");
-			delay(tahan);
+			Sleep(tahan);
 		}
 	}
 	
@@ -125,13 +117,13 @@ void createLineY (int y, int toY, int x, int tahan = 0, char style = '#'){
 		for(int i = y; i <= toY; i++){
 			linexy(x, i);//13 
 			printf("|");
-			delay(tahan);
+			Sleep(tahan);
 		}
 	}else {
 		for(int i = y; i <= toY; i++){
 			linexy(x, i);//13 
 			printf("#");
-			delay(tahan);
+			Sleep(tahan);
 		}
 	}
 }
@@ -141,7 +133,7 @@ void createText(int x, int y, string text ,int tahan = 0){
 	linexy(x, y);
 	for(int i = 0; i <= text.length(); i++ ){
 		cout << text[i];
-		delay(tahan);
+		Sleep(tahan);
 	}
 }
 
@@ -215,7 +207,6 @@ void tulisanFindTreasure(){
 	createText(37, 27 , "    |  /                                                                                         /."	);		
 	createText(37, 28 , "    \\_/_________________________________________________________________________________________/."		);	
 }
-
 
 //tulisan welcome
 void textWelcome(){
@@ -360,66 +351,6 @@ void lolosStage(){
 	createText(60,24,"|;____________/%%%%%%%%%%%%%%%%%\\____________;|");
 	print(RESET);
 	getch();
-}
-
-// animasi orang joget
-void joget(){
-	for(int i  = 0 ; i<=2; i++){
-		createText(10,10," o       ");
-		createText(10,11,"/|l      ");
-		createText(10,12,"/ l      ");
-		delay(800);
-
-		createText(10,10,"l o /    ");
-		createText(10,11,"  |      ");
-		createText(10,12," / l     ");
-		delay(800);
-
-		createText(10,10,"_ o      ");
-		createText(10,11," /l      ");
-		createText(10,12,"| l      ");
-		delay(800);
-			
-		createText(10,10,"___lo    ");
-		createText(10,11,"/)  |    ");
-		createText(10,12,"         ");
-		delay(800);
-
-		createText(10,10," __|     ");
-		createText(10,11,"   lo    ");
-		createText(10,12,"   ( l   ");
-		delay(800);
-
-		createText(10,10,"l /      ");
-		createText(10,11," |       ");
-		createText(10,12,"/ol      ");
-		delay(800);
-
-		createText(10,10,"     |__ ");
-		createText(10,11,"   o/    ");
-		createText(10,12," / )     ");
-		delay(800);
-
-		createText(10,10,"   o _   ");
-		createText(10,11,"   /l    ");
-		createText(10,12,"   / |   ");
-		delay(800);
-
-		createText(10,10,"l o /    ");
-		createText(10,11,"  |      ");
-		createText(10,12," / l     ");
-		delay(800);
-
-		createText(10,10," o       ");
-		createText(10,11,"/|l	  ");
-		createText(10,12,"/ l	  ");
-		delay(800);
-
-		createText(10,10,"o/__	  ");
-		createText(10,11," |  (l	  ");
-		createText(10,12,"      	  ");
-		delay(800);
-	}
 }
 
 // box game over

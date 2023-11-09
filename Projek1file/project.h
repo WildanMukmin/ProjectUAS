@@ -111,10 +111,10 @@ void login(){
 			createLineY(5, 7, 59  , 10, '|' );
 			createLineY(5, 7, 113 , 10, '|' );
 			createText(78, 6, "L O G I N  G A G A L !");
-			delay(10000);
+			Sleep(5000);
 			system("cls");
 			print(RESET);
-			login();
+			opsiLogin();
 			break;
 		}
     }
