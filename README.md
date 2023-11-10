@@ -45,7 +45,7 @@ saya ingin menyampaikan rasa terima kasih kepada kontributor utama pembuatan gam
 
 -   **Wildan Mukmin:** Pembuat Alur Program, Ahli Database, dan Fitur Verifikasi Pengguna.
 -   **Febrina Aulia Azzahra:** Perancang Konsep, Desainer Game, dan Kontributor Musik Latar serta Efek Suara.
--   **Alia Rahayu:** Desainer Antarmuka Pengguna (UI), Fitur Perekaman dan Tampilan Skor Tertinggi.
+-   **Alia Rahayu:** Desainer Antarmuka Pengguna (UI), Kontributor Map Game.
 
 Kepada sahabat-sahabat yang tak henti memberikan dukungan, semangat, dan kerjasama dalam perancangan game ini, saya ingin menyampaikan ucapan terima kasih yang tulus. Setiap langkah dalam proyek ini terasa lebih ringan dan menyenangkan berkat kontribusi dan semangat setiap satu dari kalian.
 
