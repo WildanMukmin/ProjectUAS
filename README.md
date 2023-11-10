@@ -1,6 +1,6 @@
 # GAME_BERBURU_HARTA
 
-## Pengenalan
+## INTRODUCTION
 
 Selamat datang di Game Berburu Harta! Program seru ini merupakan hasil proyek akhir semester (UAS) yang dikembangkan di bawah bimbingan Dosen Dwi Sakheti. Proyek ini adalah hasil kolaborasi tiga anggota tim yang berdedikasi untuk menciptakan pengalaman bermain game yang menghibur:
 
@@ -10,7 +10,7 @@ Selamat datang di Game Berburu Harta! Program seru ini merupakan hasil proyek ak
 
 3. **Alia Rahayu** - Dengan keahliannya dalam desain antarmuka pengguna (UI), Alia menciptakan antarmuka program yang ramah pengguna, memudahkan Anda menikmati permainan ini, dan merancang map yang sangat menarik.
 
-## Fitur Utama
+## FEATURES
 
 Game Berburu Harta memiliki beberapa fitur unggulan, antara lain:
 
@@ -21,7 +21,7 @@ Game Berburu Harta memiliki beberapa fitur unggulan, antara lain:
 -   Musik latar yang menarik dan efek suara yang memukau.
 -   Perekaman dan tampilan skor tertinggi.
 
-## Memulai
+## HOW TO PLAY
 
 Untuk memulai petualangan berburu harta Anda, ikuti langkah-langkah sederhana berikut:
 
@@ -30,14 +30,16 @@ Untuk memulai petualangan berburu harta Anda, ikuti langkah-langkah sederhana be
 3. Ikuti petunjuk di layar untuk memahami aturan dan cara bermain.
 4. Nikmati petualangan seru dalam berburu harta!
 
-## Informasi Kontak
+## ABOUT US
 
 Kami senang menerima masukan dari Anda dan siap menjawab pertanyaan Anda. Jangan ragu untuk menghubungi kami:
 
 -   Surel: wildanmukmin26@email.com
--   Instagram: @wildanmukmin , @febrn.16 , @aliarrahayu
+-   Instagram: @wildanmukmin
+-   Instagram: @febrn.16
+-   Instagram: @aliarrahayu
 
-## Pengakuan
+## GRATITUDE
 
 saya ingin menyampaikan rasa terima kasih kepada kontributor utama pembuatan game ini:
 
@@ -61,4 +63,4 @@ Terimakasih teman-teman, bukan hanya sekadar rekan kerja, tapi sahabat sejati. S
 
 Terima kasih atas dedikasi dan semangat kontributor dalam membantu mewujudkan Game Berburu Harta ini. saya harap kita semua menikmati permainan ini.
 
-## Selamat bermain!
+## HAVE A NICE PLAY!
