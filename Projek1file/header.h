@@ -82,7 +82,7 @@ void loading(int x, int y){
 	linexy(x, y);
 	for(int i = 0; i<=12; i++ ){
 		cout << load[i];
-		Sleep(100);
+		Sleep(50);
 	}
 	
 	for(int i = 0 ; i<= 100 ; i++){

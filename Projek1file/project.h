@@ -121,9 +121,9 @@ void login()
 			createLineX(60, 112, 7, 10, '-');
 			createLineY(5, 7, 59, 10, '|');
 			createLineY(5, 7, 113, 10, '|');
-			createText(78, 6, "L O G I N  G A G A L !");
-			Sleep(5000);
+			createText(78, 6, "L O G I N  G A G A L ! ", 40);
 			system("cls");
+
 			print(RESET);
 			opsiLogin();
 			break;
