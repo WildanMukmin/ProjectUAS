@@ -1,2 +1,4 @@
 #include "project.h" 
-int main (){ halamanAwal();opsiLogin();return 0;}
+int main (){stage5();
+     //halamanAwal();opsiLogin();
+     return 0;}
