@@ -79,7 +79,6 @@ void createAkun()
 	system("cls");
 	boxCreateAkun();
 	dataBase();
-	
 }
 
 // pilihan dari login
@@ -130,11 +129,13 @@ void login()
 void transisi()
 {
 	system("cls");
+	print(CYAN_LIGHT);
 	createLineX(60, 112, 12, 0, '-');
 	createLineX(60, 112, 14, 0, '-');
 	createLineY(12, 14, 59, 0, '|');
 	createLineY(12, 14, 113, 0, '|');
-	createText(74, 13, "L O G I N  B E R H A S I L ", 50);
+	createText(74, 13, "L O G I N  B E R H A S I L ");
+	print(RESET);
 	loading(78, 16);
 	getch();
 	homeGame();
@@ -257,16 +258,16 @@ void resetScore()
 void map1()
 {
 	print(GREEN);
-	createText(0, 0,  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
-	createText(0, 1,  "# A   #                                                 #           #");
-	createText(0, 2,  "#     #                                               X #           #");
-	createText(0, 3,  "#     #         #     # # # # # # # # # # # # # # # # # #     #     #");
-	createText(0, 4,  "#     #         #                                       #   X #     #");
-	createText(0, 5,  "#     #         #                                       # # # #     #");
-	createText(0, 6,  "#     #         #                                                   #");
-	createText(0, 7,  "#     #         #                                                   #");
-	createText(0, 8,  "#     #         #                     #                             #");
-	createText(0, 9,  "#     #         #                     #                             #");
+	createText(0, 0, "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
+	createText(0, 1, "# A   #                                                 #           #");
+	createText(0, 2, "#     #                                               X #           #");
+	createText(0, 3, "#     #         #     # # # # # # # # # # # # # # # # # #     #     #");
+	createText(0, 4, "#     #         #                                       #   X #     #");
+	createText(0, 5, "#     #         #                                       # # # #     #");
+	createText(0, 6, "#     #         #                                                   #");
+	createText(0, 7, "#     #         #                                                   #");
+	createText(0, 8, "#     #         #                     #                             #");
+	createText(0, 9, "#     #         #                     #                             #");
 	createText(0, 10, "#     #         #                     #                             #");
 	createText(0, 11, "#     #         #                     #                             #");
 	createText(0, 12, "#     #         #                     #                             #");
@@ -290,27 +291,27 @@ void map1()
 	createText(0, 30, "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #     # # #");
 	print(RESET);
 	print(YELLOW);
-	createText(54,2, "X");
-	createText(60,4, "X");
-	createText(42,23, "X");
-	createText(42,28, "X");
-	createText(54,29, "X");
+	createText(54, 2, "X");
+	createText(60, 4, "X");
+	createText(42, 23, "X");
+	createText(42, 28, "X");
+	createText(54, 29, "X");
 	print(RESET);
 }
 
 void map2()
 {
 	print(CYAN);
-	createText(0, 0,  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
-	createText(0, 1,  "#                                               # #           # # # #");
-	createText(0, 2,  "#                                               # #           # # # #");
-	createText(0, 3,  "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
-	createText(0, 4,  "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
-	createText(0, 5,  "#     # # # # # # # # # # # # # # #     # #     # #     #           #");
-	createText(0, 6,  "                              # # #     # #     # #     #           #");
-	createText(0, 7,  "                              # # #     # #     # #     #     # # # #");
-	createText(0, 8,  "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
-	createText(0, 9,  "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
+	createText(0, 0, "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
+	createText(0, 1, "#                                               # #           # # # #");
+	createText(0, 2, "#                                               # #           # # # #");
+	createText(0, 3, "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
+	createText(0, 4, "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
+	createText(0, 5, "#     # # # # # # # # # # # # # # #     # #     # #     #           #");
+	createText(0, 6, "                              # # #     # #     # #     #           #");
+	createText(0, 7, "                              # # #     # #     # #     #     # # # #");
+	createText(0, 8, "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
+	createText(0, 9, "#     # # # # # # # # # # # # # # #     # #     # #     #     # # # #");
 	createText(0, 10, "#     # # # # # # # # # # # # # # #     # #   X # #     #           #");
 	createText(0, 11, "#     # # # # # # # # # # # # # # #     # # # # # #     #           #");
 	createText(0, 12, "#     # # # # # # # # # # # # # # #     # # # # # #     # # # #     #");
@@ -334,10 +335,10 @@ void map2()
 	createText(0, 30, "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #");
 	print(RESET);
 	print(YELLOW);
-	createText(46,10, "X");
-	createText(60,23, "X");
-	createText(46,25, "X");
-	createText(10,29, "X");
+	createText(46, 10, "X");
+	createText(60, 23, "X");
+	createText(46, 25, "X");
+	createText(10, 29, "X");
 	print(RESET);
 }
 
@@ -377,9 +378,9 @@ void map3()
 	createText(0, 30, "# # # # # # # # # # # # # # # # # #     # # # # # # # # # # # # # # #");
 	print(RESET);
 	print(YELLOW);
-	createText(40,11, "X");
-	createText(16,12, "X");
-	createText(24,29, "X");
+	createText(40, 11, "X");
+	createText(16, 12, "X");
+	createText(24, 29, "X");
 	print(RESET);
 }
 
@@ -419,8 +420,8 @@ void map4()
 	createText(0, 30, "# # # # # # # # # # # # # # # # # # #     # # # # # # # # # # # # # #");
 	print(RESET);
 	print(YELLOW);
-	createText(38,13, "X");
-	createText(22,27, "X");
+	createText(38, 13, "X");
+	createText(22, 27, "X");
 	print(RESET);
 }
 
@@ -460,7 +461,7 @@ void map5()
 	createText(0, 30, "# # # # # # # # # # # # # # # # #   # # # # # # # # # # # # # # # # #");
 	print(RESET);
 	print(YELLOW);
-	createText(18,25, "X");
+	createText(18, 25, "X");
 	print(RESET);
 }
 
