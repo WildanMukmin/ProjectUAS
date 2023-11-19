@@ -210,6 +210,7 @@ void tulisanFindTreasure(){
 
 //tulisan welcome
 void textWelcome(){
+	print(CYAN_LIGHT);
 	createText(30,5 ," _____                                                                                                         _____ ");
 	createText(30,6 ,"( ___ )-------------------------------------------------------------------------------------------------------( ___ )");
 	createText(30,7 ," |   |                                                                                                         |   | ");
@@ -221,10 +222,12 @@ void textWelcome(){
 	createText(30,13," |   |         \\__/  \\__/        |_______|   |_______|    \\______|    \\______/     |__|  |__|    |_______|     |   | ");
 	createText(30,14," |___|                                                                                                         |___| ");
 	createText(30,15,"(_____)-------------------------------------------------------------------------------------------------------(_____)");
+	print(RESET);
 }
 
 // box opsi login
 void boxOpsiLogin(){
+	print(CYAN_LIGHT);
 	createText(54,1 ,"                     ,---.           ,---.");
 	createText(54,2 ,"                    / /'`.'..''''--./,''\\ \\");
 	createText(54,3 ,"                    \\ \\    _       _    / /");
@@ -257,11 +260,12 @@ void boxOpsiLogin(){
 	createText(54,30,"                  ,'   ..   `     '    ..   `.");
 	createText(54,31,"                 /            )  (           '");
 	createText(54,32,"                 `..........'    `...........'");
-
+	print(RESET);
 }
 
 // box login
 void boxLogin(){
+	print(CYAN_LIGHT);
 	createText(60,10," __| |____________________________________________| |__ "	);
 	createText(60,11,"(__   ____________________________________________   __)"	);
 	createText(60,12,"   | |                  L O G I N                 | |   "	);
@@ -272,10 +276,12 @@ void boxLogin(){
 	createText(60,17," __| |____________________________________________| |__ "	);
 	createText(60,18,"(__   ____________________________________________   __)"	);
 	createText(60,19,"   | |                                            | |   "	);
+	print(RESET);
 }
 
 // box buat akun
 void boxCreateAkun(){
+	print(CYAN_LIGHT);
 	createText(60,10," __| |________________________________________________________| |__ "	);
 	createText(60,11,"(__   ________________________________________________________   __)"	);
 	createText(60,12,"   | |              C R E A T E  A C C O U N T                | |   "	);
@@ -288,6 +294,7 @@ void boxCreateAkun(){
 	createText(60,19," __| |________________________________________________________| |__ "	);
 	createText(60,20,"(__   ________________________________________________________   __)"	);
 	createText(60,21,"   | |                                                        | |   "	);
+	print(RESET);
 }
 
 // petunjuk penggunaan game

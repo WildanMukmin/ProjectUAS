@@ -36,20 +36,17 @@ void stage5();
 void halamanAwal()
 {
 	system("cls");
-	print(CYAN);
 	textWelcome();
 	PlaySound(TEXT("soundHalamanAwal.wav"), NULL, SND_ASYNC | SND_LOOP);
 	getch();
 	loading(78, 16);
 	getch();
-	print(RESET);
 }
 
 // tampilan awal login
 void opsiLogin()
 {
 	system("cls");
-	print(CYAN_LIGHT);
 	boxOpsiLogin();
 
 	// pilihan login
@@ -74,38 +71,35 @@ void opsiLogin()
 			exit(0);
 		}
 	}
-
-	print(RESET);
 }
 
 // pilihan buat akun
 void createAkun()
 {
 	system("cls");
-	print(CYAN_LIGHT);
 	boxCreateAkun();
 	dataBase();
-	print(RESET);
+	
 }
 
 // pilihan dari login
 void login()
 {
-	print(CYAN_LIGHT);
 	string output;
 	system("cls");
 	boxLogin();
+	print(CYAN_LIGHT);
 	linexy(88, 14);
 	string id;
 	cin >> id;
 	linexy(88, 16);
 	string pw;
 	cin >> pw;
+	print(RESET);
 
 	ifstream cekData;
 	cekData.open("userAkun.txt");
 
-	print(RESET);
 	while (true)
 	{
 		cekData >> output;
@@ -136,7 +130,6 @@ void login()
 void transisi()
 {
 	system("cls");
-	print(GREEN);
 	createLineX(60, 112, 12, 0, '-');
 	createLineX(60, 112, 14, 0, '-');
 	createLineY(12, 14, 59, 0, '|');
@@ -144,7 +137,6 @@ void transisi()
 	createText(74, 13, "L O G I N  B E R H A S I L ", 50);
 	loading(78, 16);
 	getch();
-	print(RESET);
 	homeGame();
 }
 
@@ -153,11 +145,13 @@ void dataBase()
 {
 	ofstream data;
 	string id;
+	print(CYAN_LIGHT);
 	linexy(88, 15);
 	cin >> id;
 	string pin;
 	linexy(88, 18);
 	cin >> pin;
+	print(RESET);
 	data.open("userAkun.txt", ios::app);
 	data << id;
 	data << pin << endl;
