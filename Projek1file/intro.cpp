@@ -54,5 +54,6 @@ int main()
 	// loading();
 	getch();
 	endwin();
-	system("app");
+	system("cls");
+	system("game");
 }

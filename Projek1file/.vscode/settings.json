@@ -3,7 +3,9 @@
         "*.ejs": "html",
         "ostream": "cpp",
         "iostream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp"
     },
     "editor.fontSize": 16,
     "window.zoomLevel": -1,

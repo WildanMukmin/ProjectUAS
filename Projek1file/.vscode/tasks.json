@@ -9,16 +9,15 @@
             "command": "g++",
             "args": [
                 "-o",
-                "app",
+                "game",
                 "main.cpp",
-                // "-lncurses",
                 "-lwinmm",
             ]
         },
         {
                 "label": "run",
                 "type": "process",
-                "command":"app",
+                "command":"game",
                 "dependsOn":["Compile C++"],
                 "group": {
                     "kind": "build",

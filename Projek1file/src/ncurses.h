@@ -1522,7 +1522,7 @@ extern NCURSES_EXPORT_VAR(int) TABSIZE;
 #define KEY_UNDO 0630			/* undo key */
 #define KEY_MOUSE 0631			/* Mouse event has occurred */
 #define KEY_RESIZE 0632			/* Terminal resize event */
-#define NC_KEY_EVENT 0633		/* We were interrupted by an event */
+#define KEY_EVENT 0633			/* We were interrupted by an event */
 
 #define KEY_MAX 0777 /* Maximum key value is 0633 */
 /* $Id: curses.wide,v 1.46 2014/02/01 22:00:32 tom Exp $ */
@@ -1837,12 +1837,12 @@ extern NCURSES_EXPORT_VAR(int) TABSIZE;
 #endif
 
 #endif /* NCURSES_WIDECHAR */
-	/* $Id: curses.tail,v 1.21 2011/10/29 20:03:22 tom Exp $ */
-	/*
-	 * vile:cmode:
-	 * This file is part of ncurses, designed to be appended after curses.h.in
-	 * (see that file for the relevant copyright).
-	 */
+	   /* $Id: curses.tail,v 1.21 2011/10/29 20:03:22 tom Exp $ */
+	   /*
+		* vile:cmode:
+		* This file is part of ncurses, designed to be appended after curses.h.in
+		* (see that file for the relevant copyright).
+		*/
 
 	/* mouse interface */
 
