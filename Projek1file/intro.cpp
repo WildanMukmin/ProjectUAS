@@ -1,51 +1,24 @@
-#include <curses.h>
+#include <ncurses/ncurses.h>
 #include <windows.h>
-#include <iostream>
+#include <mmsystem.h>
+#pragma comment(lib, "winmm.lib")
 
-/*void loading(){
-	initscr();
-	start_color();
-	init_pair(1, COLOR_WHITE, COLOR_RED);
-	init_pair(2, COLOR_WHITE, COLOR_GREEN);
-	attron(COLOR_PAIR(1));
-	mvprintw(20,20, "Loading...");
-	attroff(COLOR_PAIR(1));
-	for(int i = 3; i <= 15; i++){
-		attron(COLOR_PAIR(2));
-		mvprintw(40, i, ">>>");
-		refresh();
-		Sleep(50);
-		attroff(COLOR_PAIR(2));
-	}
-	getch();
-	endwin();
-}*/
+using namespace std;
 
-/*void loading(){
-	initscr();
-	char load [] = "L O A D I N G";
-	for(int i = 0; i<=12; i++ ){
-		mvprintw(20, 20, load[i]);
-		Sleep(50);
-	}
+void playMusic(const char* filePath) {
+    PlaySound(TEXT("music/gamestart.wav"), NULL, SND_FILENAME | SND_ASYNC);
+}
+using namespace std;
 
-	for(int i = 0 ; i<= 100 ; i++){
-		mvprintw(20, 25, " ", i, " %");//13
-		Sleep(10);
-	}
-	getch();
-	endwin();
-}*/
-
-int main()
+void textIntro()
 {
 	initscr();
 	int x, y;
 	x = 15;
 	y = 10;
 	start_color();
-	init_pair(1, COLOR_WHITE, COLOR_RED);
-	init_pair(2, COLOR_WHITE, COLOR_GREEN);
+	init_pair(1, COLOR_YELLOW, COLOR_BLACK);
+	//init_pair(2, COLOR_WHITE, COLOR_GREEN);
 	attron(COLOR_PAIR(1));
 	mvprintw(y,x, " _____                                                                                                         _____  ");y++;
 	attroff(COLOR_PAIR(1));
@@ -75,9 +48,36 @@ int main()
 	attron(COLOR_PAIR(1));
 	mvprintw(y,x, "(_____)-------------------------------------------------------------------------------------------------------(_____) ");y++;
 	attroff(COLOR_PAIR(1));
+	Sleep(50);
+	getch();
+}
+
+
+int main(){
+	initscr();
+	playMusic("music/gamestart.wav");
+	textIntro();
+	Sleep(50);
+	int x, y;
+	x = 60;
+	y = 10;
+	start_color();
+	init_pair(1, COLOR_CYAN, COLOR_BLACK);
+	init_pair(2, COLOR_YELLOW, COLOR_BLACK);
+	attron(COLOR_PAIR(2));
+	mvprintw(25,x, "LET'S START !");
+	Sleep(50);
+	attroff(COLOR_PAIR(1));
+	for(int i = 74; i <= 100; i++){
+		attron(COLOR_PAIR(2));
+		mvprintw(25, i, ">>>");
+		refresh();
+		Sleep(100);
+		attroff(COLOR_PAIR(2));
+	}
 	getch();
 	endwin();
-	system("cls");
 	system("game");
+	system("cls");
 }
 

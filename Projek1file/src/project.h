@@ -1831,7 +1831,7 @@ void gameOver()
 	{
 		char parameter = getch();
 		linexy(100, 0);
-		if (parameter == 'B' || parameter == 'b')
+		if (parameter == 'H' || parameter == 'h')
 		{
 			PlaySound(TEXT("music/soundHalamanAwal.wav"), NULL, SND_ASYNC | SND_LOOP);
 			homeGame();
