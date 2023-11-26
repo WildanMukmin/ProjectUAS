@@ -18,7 +18,6 @@ void textIntro()
 	y = 10;
 	start_color();
 	init_pair(1, COLOR_YELLOW, COLOR_BLACK);
-	//init_pair(2, COLOR_WHITE, COLOR_GREEN);
 	attron(COLOR_PAIR(1));
 	mvprintw(y,x, " _____                                                                                                         _____  ");y++;
 	attroff(COLOR_PAIR(1));
